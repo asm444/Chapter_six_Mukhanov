@@ -4,143 +4,190 @@
 \usepackage{amsmath, amsfonts, amssymb}
 \usepackage{float}
 \usepackage{graphicx}
-
+\usepackage{verbatim}
 \begin{document}
 	Arthur de Souza Molina
 	
 	Resolução de Alguns Cálculos:
 	
 	Mukhanov capitulo 6: Instabilidade Gravitacional na teoria Newtoniana
+	
 \begin{center}
 	\textbf{6.1 Equações básicas}
 \end{center}
+
 Em grandes escalas, a matéria pode ser considerada um fluido perfeito, e sua distribuição de energia pode ser caracterizada por $\varepsilon (\textbf{x},t)$, a entropia por unidade de massa $S(\textbf{x},t)$, e o vetor de velocidade $\textbf{V}(\textbf{x},t)$.
 
 Se considerarmos um volume fixo não móvel, a sua variação de massa pode ser descrita como
+
 \begin{equation}
 		\dfrac{dM}{dt} = \int_{\Delta V} \dfrac{\partial \varepsilon (x,t)}{\partial t}
 \end{equation}
 
 A variação de Massa também pode ser descrita pelo fluxo de matéria pela superfície ao redor do volume fixo
+
 \begin{equation}
 	\dfrac{dM}{dt} = - \oint \varepsilon \textbf{V} d\sigma = - \int_{\Delta V} \nabla \,(\varepsilon \, \textbf{V}) dV
 \end{equation}
 
 Essas relações somente são consistentes se
+
 \begin{equation}
 	\dfrac{\partial \varepsilon}{\partial t} +\nabla \,(\varepsilon \, \textbf{V}) = 0
 \end{equation}
 
 A aceleração gravitacional $\textbf{g}$ em um pequeno elemento com massa é determinada pela força gravitacional
+
 \begin{equation}
 	\textbf{F}_{gr} = - \Delta M \cdot \nabla \phi
 \end{equation}
+
 onde o potencial gravitacional é dado por $\phi$ e pela pressão $\textit{p}$
 \begin{equation}
 	\textbf{F}_{pr} = - \oint p \cdot\ d\sigma = - \int_{\Delta V} \nabla p\ d\sigma \approx - \nabla p \ \Delta V
 \end{equation}
+
 com 
 \begin{equation}
 	\textbf{g} \equiv \dfrac{d \textbf{V} (\textbf{x} (t), t)}{dt} = \left( \dfrac{\partial \textbf{V}}{\partial t} \right)_x + \dfrac{dx^i(t)}{dt}\left( \dfrac{\partial \textbf{V}}{\partial x^i} \right) = \frac{\partial \textbf{V}}{\partial t} + (\textbf{V} \cdot \nabla ) \textbf{V}
 \end{equation}
 \newline
 pela lei da força de Newton (Segunda Lei de Newton)
+
 \begin{equation}
 	\Delta M \cdot \textbf{g} = \textbf{F}_{gr} + \textbf{F}_{pr}
 \end{equation}
 \newline
 $$\Delta M \cdot \textbf{g} -  \textbf{F}_{gr} - \textbf{F}_{pr} = 0 $$
+
 $$\Delta M \cdot \textbf{g}  + \nabla p \ \Delta V + \Delta M \cdot \nabla \phi=0 $$
 
 com $\Delta M \equiv \Delta V \cdot \varepsilon$, e portanto $\Delta V = \dfrac{\Delta M}{\varepsilon}$
 $$\Delta M \cdot \textbf{g}  + \nabla p \,\dfrac{\Delta M}{\varepsilon} + \Delta M \cdot \nabla \phi=0 $$
+
 $$\textbf{g}  + \dfrac{\nabla p}{\varepsilon} + \nabla \phi=0 $$
 ao substituir a equação (6), torna-se a equação de Euler
+
 \begin{equation}
 	\dfrac{\partial \textbf{V} }{\partial t} + (\textbf{V} \cdot \nabla ) \textbf{V} + \frac{\nabla p}{\varepsilon} + \nabla \phi =0
 \end{equation}
+
 A conservação de entropia negligência a dissipação de energia, logo a entropia para um pequeno elemento de matéria é conservada:
+
 \begin{equation}
 	\dfrac{dS(\textbf{x},t)}{dt} = \dfrac{\partial S}{\partial t} + ( \textbf{V} \cdot \nabla) S = 0
 \end{equation}
+
 A equação que determina o potencial gravitacional é conhecida como equação de Poisson
+
 \begin{equation}
 	\Delta\phi = 4\pi G\varepsilon
 \end{equation}
+
 Com as equações $(3), (6)\to (10)$ tomadas em conjunto com a equação de estado
+
 \begin{equation}
 	p= p(\varepsilon , S)
 \end{equation}
+
 formam um conjunto completo de sete equações que, em princípio, nos permite determinar
 as sete funções desconhecidas $\varepsilon, \textbf{V}, S, \phi, p$. As equações hidrodinâmicas  não são lineares, e em geral não é fácil encontrar suas soluções. No entanto, para estudar o comportamento de pequenas perturbações em torno de um fundo homogêneo e isotrópico, é apropriado torna-las lineares.
 
 \begin{center}	
 	\textbf{6.2 Teoria Jeans}
 \end{center}
+
 Vamos primeiro considerar um universo não expansível estático, assumindo o homogêneo,
 fundo isotrópico com densidade de matéria independente do tempo constante: $\varepsilon (x,t)= const$. Na verdade, a densidade de energia permanece inalterada apenas se a matéria estiver em repouso e a força gravitacional $F \propto\nabla\phi$, que desaparece. Logo, a equação de Poisson não é satisfeita, essa inconsistência pode, em principio, se considerarmos um universo estático, onde a força gravitacional da matéria é compensada pela constante cosmológica apropriada escolhida.
 
 Ao perturbar a distribuição de matéria, temos
+
 \begin{equation}
 	\varepsilon (\textbf{x},t) = \varepsilon_0 + \delta\varepsilon (\textbf{x},t),\,\, \textbf{V} (\textbf{x},t) = \textbf{V}_0 +\delta\textbf{V} (\textbf{x},t) 
 \end{equation}
+
 $$\phi (\textbf{x},t) = \phi_0 + \delta\phi (\textbf{x},t), S (\textbf{x},t)= S_0 + \delta S (\textbf{x},t)$$
+
 onde cada variação $\delta\varepsilon \ll \varepsilon_0$, etc..
 \newline
 A pressão é dada por
+
 \begin{equation}
 	p (\textbf{x},t) = p( \varepsilon_0 + \delta\varepsilon (\textbf{x},t), S_0 + \delta S (\textbf{x},t) ) = p_0 +\delta p (\textbf{x},t) 
 \end{equation}
+
 $\delta p$ pode ser escrito em termos da densidade de energia e pertubações de entropia como
+
 \begin{equation}
 	\delta p = c_s^2\delta\varepsilon + \sigma\delta S
 \end{equation}
+
 onde $c^2_s \equiv \left(\dfrac{\partial p}{\partial\varepsilon}\right)_s$ é o quadrado da velocidade do som e $\sigma \equiv \left(\dfrac{\partial p}{\partial S}\right)_\varepsilon$. Para a matéria não relativística, a velocidade do som é muito menor que a velocidade da luz.
 
 Substituindo (12) e (14) em (3), (8) - (10) e mantendo apenas os termos
 que são lineares nas perturbações, obtemos:
 \newline
 $$\dfrac{\partial \varepsilon}{\partial t} +\nabla \,(\varepsilon \, \textbf{V}) = 0$$
+
 \begin{equation}
 	\dfrac{\partial\delta\varepsilon}{\partial t} + \varepsilon_0 \nabla (\delta\textbf{v}) = 0
 \end{equation}
 \newline
 
 $$\dfrac{\partial\textbf{V}}{\partial t} + (\textbf{V} \cdot \nabla ) \textbf{V} + \frac{\nabla p}{\varepsilon} + \nabla \phi =0$$
+
 $$\dfrac{\partial\delta\textbf{v}}{\partial t} + (\delta\textbf{v} \cdot \nabla ) \delta\textbf{v} + \frac{\nabla \delta p}{\varepsilon_0} + \nabla \delta\phi =0$$
+
 $$\dfrac{\partial\delta\textbf{v}}{\partial t} + \frac{\nabla (c_s^2\delta\varepsilon + \sigma\delta S )}{\varepsilon_0} + \nabla \delta\phi =0$$
+
 $$\dfrac{\partial\delta\textbf{v}}{\partial t} +\frac{\nabla c_s^2\delta\varepsilon }{\varepsilon_0} + \frac{\nabla \sigma\delta S }{\varepsilon_0} + \nabla \delta\phi =0$$
+
 \begin{equation}
 	\dfrac{\partial\delta\textbf{v}}{\partial t} + \dfrac{c^2_s}{\varepsilon_0} \nabla\delta\varepsilon + \dfrac{\sigma}{\varepsilon_0}\nabla\delta S + \nabla\delta\phi = 0
 \end{equation}
 \newline
+
 $$\dfrac{\partial S}{\partial t} = 0$$
+
 \begin{equation}
 	\dfrac{\partial\delta S}{\partial t} = 0
 \end{equation}
 \newline
 $$\Delta\phi = 4\pi G\varepsilon$$
+
 \begin{equation}
 	\Delta\delta\phi = 4\pi G\delta\varepsilon
 \end{equation}
+
 A equação (17) possui solução simples, dado que
 \begin{equation}
 	\delta S (\textbf{x},t) =\delta S (\textbf{x}),
 \end{equation}
+
 isso indica que a entropia é invariante em relação ao tempo, mas varia em coordenadas arbitrárias.
 
 Tomando a divergente da equação (16) e escrevendo $\nabla\delta S$ e $\Delta\delta\phi$ em termos de $\delta\varepsilon$, temos
+
 $$\dfrac{\partial\delta\textbf{v}}{\partial t} + \dfrac{c^2_s}{\varepsilon_0} \nabla\delta\varepsilon + \dfrac{\sigma}{\varepsilon_0}\nabla\delta S + \nabla\delta\phi = 0$$
+
 $$\nabla\cdot \left( \dfrac{\partial\delta\textbf{v}}{\partial t} + \dfrac{c^2_s}{\varepsilon_0} \nabla\delta\varepsilon + \dfrac{\sigma}{\varepsilon_0}\nabla\delta S + \nabla\delta\phi \right)= \nabla\cdot 0$$
+
 $$\nabla\cdot \left( \dfrac{\partial\delta\textbf{v}}{\partial t} \right) + \nabla\cdot \left( \dfrac{c^2_s}{\varepsilon_0} \nabla\delta\varepsilon \right) +\nabla\cdot \left( \dfrac{\sigma}{\varepsilon_0}\nabla\delta S \right) + \nabla\cdot \left( \nabla\delta\phi \right) = 0$$
+
 $$\dfrac{\partial\Delta\textbf{v}}{\partial t} + \dfrac{c^2_s}{\varepsilon_0} \Delta\delta\varepsilon  + \dfrac{\sigma}{\delta\varepsilon_0}\Delta\delta S (\textbf{x})+  \Delta\delta\phi = 0$$
+
 dado que $\dfrac{\partial\delta\varepsilon}{\partial t} + \varepsilon_0 \nabla (\delta\textbf{v}) = 0$ e $\dfrac{\partial\Delta\textbf{v}}{\partial t}= - \dfrac{\partial^2\delta\varepsilon}{\varepsilon_0\partial t^2} $ então
+
 $$- \dfrac{\partial^2\delta\varepsilon}{\varepsilon_0\partial t^2}+\dfrac{c^2_s}{\varepsilon_0} \Delta\delta\varepsilon  + \dfrac{\sigma}{\varepsilon_0}\Delta\delta S (\textbf{x})+  \Delta\delta\phi = 0$$
+
 $$\dfrac{\partial^2\delta\varepsilon}{\partial t^2}-c^2_s \Delta\delta\varepsilon  -\sigma\Delta\delta S (\textbf{x})-  \varepsilon_0\Delta\delta\phi = 0$$
+
 $$\dfrac{\partial^2\delta\varepsilon}{\partial t^2}-c^2_s \Delta\delta\varepsilon  -\sigma\Delta\delta S (\textbf{x})-  4\pi G\varepsilon_0\delta\varepsilon = 0$$
+
 \begin{equation}
 	\dfrac{\partial^2\delta\varepsilon}{\partial t^2} - c^2_s\Delta\delta\varepsilon - 4\pi G\varepsilon_0\delta\varepsilon = \sigma\Delta\delta S(\textbf{x})
 \end{equation}
+
 Esta é uma equação linear fechada para $\delta\varepsilon$, onde a perturbação de entropia serve como um
 determinada fonte.
 
@@ -150,40 +197,67 @@ determinada fonte.
 Primeiro, podemos supor as pertubações de entropia ausentes, isto é, $\delta S=0$. O
 coeficientes em (20) não dependem das coordenadas espaciais, portanto, ao tomar o
 Transformada de Fourier,
+
 \begin{equation}
 	\delta\varepsilon (\textbf{x} , t ) = \int \delta\varepsilon_k (t)  \dfrac{e^{ik\textbf{x}}d^3 k}{(2\pi)^{2/3}}
 \end{equation}
+
 obtemos um conjunto de equações diferenciais ordinárias independentes para as
 Coeficientes de Fourier $\delta\varepsilon_k (t)$
+
 $$\dfrac{\partial^2\delta\varepsilon}{\partial t^2} - c^2_s\Delta\delta\varepsilon - 4\pi G\varepsilon_0\delta\varepsilon = 0$$
+
 $$\dfrac{\partial^2 \left(\int \delta\varepsilon_k (t)  \dfrac{e^{ik\textbf{x}}d^3 k}{(2\pi)^{2/3}} \right)}{\partial t^2} - c^2_s\Delta\left(\int \delta\varepsilon_k (t)  \dfrac{e^{ik\textbf{x}}d^3 k}{(2\pi)^{2/3}} \right) - 4\pi G\varepsilon_0\left(\int \delta\varepsilon_k (t)  \dfrac{e^{ik\textbf{x}}d^3 k}{(2\pi)^{2/3}} \right) = 0$$
+
 $$ \dfrac{\partial^2 }{\partial t^2}\left(\int \delta\varepsilon_k (t)  \dfrac{e^{ik\textbf{x}}d^3 k}{(2\pi)^{2/3}} \right) - c^2_s\Delta\left(\int \delta\varepsilon_k (t) \dfrac{e^{ik\textbf{x}} d^3 k}{(2\pi)^{2/3}} \right) - 4\pi G\varepsilon_0\delta\varepsilon_k (t)\left(\int   \dfrac{e^{ik\textbf{x}}d^3 k}{(2\pi)^{2/3}} \right) = 0$$
+
 dado que $\Delta = \nabla^2 = \dfrac{\partial^2}{\partial\textbf{x}^2} = \dfrac{\partial^2}{\partial x^2} + \dfrac{\partial^2}{\partial y^2} + \dfrac{\partial^2}{\partial z^2}$, logo
+
 $$\dfrac{\partial^2 }{\partial t^2}\left(\int \delta\varepsilon_k (t)  \dfrac{e^{ik\textbf{x}}d^3 k}{(2\pi)^{2/3}} \right)  - c^2_s\left(\int  \dfrac{\partial^2  (\delta\varepsilon_k (t))}{\partial\textbf{x}^2} \dfrac{e^{ik\textbf{x}}d^3 k}{(2\pi)^{2/3}} \right) - 4\pi G\varepsilon_0  \left(\int \delta\varepsilon_k (t)  \dfrac{e^{ik\textbf{x}}d^3 k}{(2\pi)^{2/3}} \right) = 0$$
+
 pela propriedade da transformada de Fourier de derivadas, temos 
 $$\int  \dfrac{\partial^2  (\delta\varepsilon_k (t))}{\partial\textbf{x}^2} \dfrac{e^{ik\textbf{x}}d^3 k}{(2\pi)^{2/3}} = (|k|i)^2\int  \delta\varepsilon_k (t) \dfrac{e^{ik\textbf{x}}d^3 k}{(2\pi)^{2/3}}$$
+
 portanto
 $$\dfrac{\partial^2 }{\partial t^2}\left(\int \delta\varepsilon_k (t)  \dfrac{e^{ik\textbf{x}}d^3 k}{(2\pi)^{2/3}} \right)  - c^2_s \left((ki)^2\int  \delta\varepsilon_k (t) \dfrac{e^{ik\textbf{x}}d^3 k}{(2\pi)^{2/3}}\right) - 4\pi G\varepsilon_0  \left(\int \delta\varepsilon_k (t)  \dfrac{e^{ik\textbf{x}}d^3 k}{(2\pi)^{2/3}} \right) = 0$$
+
 $$\dfrac{\partial^2 }{\partial t^2}\left(\int \delta\varepsilon_k (t)  \dfrac{e^{ik\textbf{x}}d^3 k}{(2\pi)^{2/3}} \right)  + |k|^2c^2_s\int  \delta\varepsilon_k (t) \dfrac{e^{ik\textbf{x}}d^3 k}{(2\pi)^{2/3}} - 4\pi G\varepsilon_0  \left(\int \delta\varepsilon_k (t)  \dfrac{e^{ik\textbf{x}}d^3 k}{(2\pi)^{2/3}} \right) = 0$$
+
 $$\dfrac{\partial^2 }{\partial t^2} \left(\int \delta\varepsilon_k (t)  \dfrac{e^{ik\textbf{x}}d^3 k}{(2\pi)^{2/3}} \right) + (|k|^2c^2_s - 4\pi G\varepsilon_0)  \left(\int \delta\varepsilon_k (t)  \dfrac{e^{ik\textbf{x}}d^3 k}{(2\pi)^{2/3}} \right) = 0$$
+
 $$ \left(\int \dfrac{\partial^2 }{\partial t^2}( \delta\varepsilon_k (t))  \dfrac{e^{ik\textbf{x}}d^3 k}{(2\pi)^{2/3}} \right) + \int (|k|^2c^2_s - 4\pi G\varepsilon_0)\delta\varepsilon_k (t) \dfrac{ e^{ik\textbf{x}}d^3 k}{(2\pi)^{2/3}} = 0$$
+
 $$ \int \left(\dfrac{\partial^2 (\delta\varepsilon_k (t))}{\partial t^2} +(|k|^2c^2_s - 4\pi G\varepsilon_0)\delta\varepsilon_k (t)\right)  \dfrac{e^{ik\textbf{x}}d^3 k}{(2\pi)^{2/3}} = 0$$
+
 multiplicando por $e^{i k^\prime \textbf{x}}$ em ambos os lados, temos
 $$ e^{i k^\prime \textbf{x}} \cdot \int \left(\dfrac{\partial^2 (\delta\varepsilon_k (t))}{\partial t^2} +(|k|^2c^2_s - 4\pi G\varepsilon_0)\delta\varepsilon_k (t)\right)\dfrac{e^{ik\textbf{x}}d^3 k}{(2\pi)^{2/3}} = 0 \cdot  e^{i k^\prime \textbf{x}}$$
+
 $$ \int \left(\dfrac{\partial^2 (\delta\varepsilon_k (t))}{\partial t^2} +(|k|^2c^2_s - 4\pi G\varepsilon_0)\delta\varepsilon_k (t)\right) e^{i k^\prime \textbf{x}}  \dfrac{e^{ik\textbf{x}}d^3 k}{(2\pi)^{2/3}} = 0$$
+
 $$ \int \cdot \left(\int \left(\dfrac{\partial^2 (\delta\varepsilon_k (t))}{\partial t^2} +(|k|^2c^2_s - 4\pi G\varepsilon_0)\delta\varepsilon_k (t)\right) e^{i k^\prime \textbf{x}}  \dfrac{e^{ik\textbf{x}}d^3 k}{(2\pi)^{2/3}}\right) d\textbf{x} =\int \left( 0 \right) d\textbf{x}$$
+
 $$  \int \left(\dfrac{\partial^2 (\delta\varepsilon_k (t))}{\partial t^2} +(|k|^2c^2_s - 4\pi G\varepsilon_0)\delta\varepsilon_k (t)\right)\cdot \left(\int \dfrac{e^{ i (k^\prime \textbf{x} +  k\textbf{x}) }}{(2\pi)^{2/3}}d\textbf{x}\right) d^3k   =0$$
+
 $$ \int \left(\dfrac{\partial^2 (\delta\varepsilon_k (t))}{\partial t^2} +(|k|^2c^2_s - 4\pi G\varepsilon_0)\delta\varepsilon_k (t)\right) \cdot\left(\int  \dfrac{e^{ i \textbf{x}(k^\prime  + k) }}{(2\pi)^{2/3}}d\textbf{x} \right)d^3k  =0$$
+
 $$  \int \left(\dfrac{\partial^2 (\delta\varepsilon_k (t))}{\partial t^2} +(|k|^2c^2_s - 4\pi G\varepsilon_0)\delta\varepsilon_k (t)\right) \delta (k^\prime + k) d^3k  =0$$
+
 $$  \int \delta (k^\prime + k)\left(\dfrac{\partial^2 (\delta\varepsilon_k (t))}{\partial t^2} +(|k|^2c^2_s - 4\pi G\varepsilon_0)\delta\varepsilon_k (t)\right)  d^3k  =0$$
+
 para a integral definida ser equivalente a zero, o integrando deve ser igual a zero, logo
+
 \begin{equation}
 	\dfrac{\partial^2 (\delta\varepsilon_k (t))}{\partial t^2} +(k^2c^2_s - 4\pi G\varepsilon_0)\delta\varepsilon_k (t) = 0
 \end{equation}
+
 sendo $k = |k|$ e uma possível solução seria $\delta\varepsilon_k=\lambda e^{\omega t}$, portanto
+
 $$\dfrac{\partial^2 (\lambda e^{\omega t})}{\partial t^2} +(k^2c^2_s - 4\pi G\varepsilon_0)\lambda e^{\omega t} = 0$$
+
 $$\lambda\omega^2 e^{\omega t} +(k^2c^2_s - 4\pi G\varepsilon_0)\lambda e^{\omega t} = 0$$
+
 $$\omega^2  + k^2c^2_s - 4\pi G\varepsilon_0 = 0$$
+
 $$\omega^2  =  + 4\pi G\varepsilon_0 -k^2c^2_s $$
 
 $$\omega = \pm \sqrt{4\pi G\varepsilon_0 -k^2c^2_s} =  \pm \sqrt{(-1)(k^2c^2_s - 4\pi G\varepsilon_0) }= \pm i \sqrt{k^2c^2_s - 4\pi G\varepsilon_0} $$
@@ -192,23 +266,31 @@ A equação (22) tem a solução
 \begin{equation}
 	\delta\varepsilon_k (t) \propto e^{(\pm \omega (t) t)}
 \end{equation}
+
 onde $\omega (t) = \sqrt{k^2c^2_s - 4\pi G \varepsilon_0}$. O comportamento da pertubação adiabática depende exclusivamente pelo sinal do expoente. 
 
 Definindo o comprimento Jeans como
-$$\lambda_J = \dfrac{2\pi}{k_J} = c_S \left(\dfrac{\pi}{G\varepsilon_0} \right)^{1/2}$$
+\begin{equation}
+	\lambda_J = \dfrac{2\pi}{k_J} = c_S \left(\dfrac{\pi}{G\varepsilon_0} \right)^{1/2}
+\end{equation}
+
 de modo que $\omega (k_J) = 0$, concluímos que se $\lambda < \lambda_J$, as soluções descrevem as ondas sonoras
+
 \begin{equation}
 	\delta\varepsilon_k \propto \sin (\omega t + \mathbf{k}\mathbf{x} + \alpha)
 \end{equation}
- propagando com velocidade de fase
+
+propagando com velocidade de fase
 \begin{equation}
  	c_{fase} = \dfrac{\omega}{k}= c_s\sqrt{1 - \dfrac{k^2_J}{k}}.
 \end{equation}
+
 No limite $k \geq k_J$ ou em escalas muito pequenas ($\lambda \leq \lambda_J$) onde a gravidade é insignificante comparado com a pressão, temos $c_{fase} \to c_s$.
 Em largas escalas a gravidade domina e $\lambda > \lambda_J$, temos
 \begin{equation}
 	\delta\varepsilon_k \propto e^{\pm |\omega| t }
 \end{equation}
+
  Uma dessas soluções descrevem o comportamento exponencialmente rápido e não homogêneo, enquanto outras correspondem o modo decaimento. Onde $k \to 0, |\omega | t \to \dfrac{t}{t_{gr}}$, onde $t_{gr} \equiv (4\pi G\varepsilon_0)^{-1/2}$. Onde $t_{gr}$ é interpretado como o tempo característico de colapso para uma região com uma densidade de energia inicial $\varepsilon_0$.
  O comprimento Jeans $\lambda_J \sim c_s t_{gr} $ é o "comunicação de som" sobre a qual a pressão consegue reagir as mudanças da densidade de energia devido ao colapso gravitacional.
  
@@ -217,14 +299,363 @@ Em largas escalas a gravidade domina e $\lambda > \lambda_J$, temos
  \begin{center}
  	\textbf{6.2.2 Pertubações de Vetor}
  \end{center}
+ Substituindo $\delta\varepsilon = 0$ e $\delta S = 0$ na equação (20), obtemos uma solução não trivial para o sistema de equações hidrodinâmicas. Já para as equações (15)-(18) reduzimos em
  
+ \begin{equation}
+ 	\nabla \delta\mathbf{v} = 0 ,\,\,\,\,\,\,\, \dfrac{\partial \mathbf{v}}{\partial t} = 0
+ \end{equation}
+
+Pela segunda equação, é possível notar que $\delta\mathbf{v}$ é uma função das coordenadas espaciais independente do tempo. E a primeira equação diz respeito a velocidade da pertubação de onda plana, isto é, $\delta\mathbf{v} = \mathbf{w_k} e^{i\mathbf{k}\mathbf{x}}$ e que a velocidade é perpendicular ao vetor de onda $\mathbf{k}$, ou seja,
+\begin{equation}
+	\mathbf{w_k} \cdot \mathbf{k} = 0
+\end{equation}
+
+ Essas perturbações vetoriais descrevem movimentos de cisalhamento do meio que não perturbam a densidade de energia. Porque existem duas direções perpendiculares independentes para $\mathbf{k}$, existem dois modos vetoriais independentes para um determinado $\mathbf{k}$.
+  \begin{center}
+ 	\textbf{6.2.2 Pertubações de Entropia}
+ \end{center}
+
+Considerando que $\delta S \neq 0$, dada a transformação de Fourier da equação (20) e dado que $$\delta S = \int \delta S_k \dfrac{e^{ik\textbf{x}}d^3 k}{(2\pi)^{2/3}}, $$ obtendo uma solução semelhante a equação (22), temos
+
+$$\dfrac{\partial^2\delta\varepsilon}{\partial t^2} - c^2_s\Delta\delta\varepsilon - 4\pi G\varepsilon_0\delta\varepsilon = \sigma\Delta \delta S$$
+
+$\displaystyle\int \left(\dfrac{\partial^2 \delta\varepsilon_k (t)}{\partial t^2}  \dfrac{e^{ik\textbf{x}}}{(2\pi)^{2/3}} \right)d^3 k  - c^2_s\left( \int \delta\varepsilon_k (t)\Delta (e^{ik\textbf{x}})  \dfrac{d^3 k}{(2\pi)^{2/3}} \right) - 4\pi G\varepsilon_0\left(\int \delta\varepsilon_k (t)  \dfrac{e^{ik\textbf{x}}d^3 k}{(2\pi)^{2/3}} \right) = \sigma \int \left(\delta S_k \Delta (e^{ik\textbf{x}})\dfrac{}{(2\pi)^{2/3}} \right)d^3 k$
+
+$\displaystyle\int \left(\dfrac{\partial^2 \delta\varepsilon_k (t)}{\partial t^2}  \dfrac{e^{ik\textbf{x}}}{(2\pi)^{2/3}} \right)d^3 k  - c^2_s\left( \int  \dfrac{\partial^2  (\delta\varepsilon_k (t))}{\partial\textbf{x}^2} \dfrac{e^{ik\textbf{x}}d^3 k}{(2\pi)^{2/3}} \right) - 4\pi G\varepsilon_0\left(\int \delta\varepsilon_k (t)  \dfrac{e^{ik\textbf{x}}d^3 k}{(2\pi)^{2/3}} \right) = \sigma  \left(\int  \dfrac{\partial^2  (\delta S_k)}{\partial\textbf{x}^2} \dfrac{e^{ik\textbf{x}}d^3 k}{(2\pi)^{2/3}} \right)$
+\newline
+pela propriedade da transformada de Fourier de derivadas, temos 
+
+$$\int  \dfrac{\partial^2  (\delta\varepsilon_k (t))}{\partial\textbf{x}^2} \dfrac{e^{ik\textbf{x}}d^3 k}{(2\pi)^{2/3}} = (|k|i)^2\int  \delta\varepsilon_k (t) \dfrac{e^{ik\textbf{x}}d^3 k}{(2\pi)^{2/3}}$$
+ e 
  
+$$\int  \dfrac{\partial^2  (\delta S_k)}{\partial\textbf{x}^2} \dfrac{e^{ik\textbf{x}}d^3 k}{(2\pi)^{2/3}} = (|k|i)^2\int  \delta S_k  \dfrac{e^{ik\textbf{x}}d^3 k}{(2\pi)^{2/3}}$$
+
+$\displaystyle\int \left(\dfrac{\partial^2 \delta\varepsilon_k (t)}{\partial t^2}  \dfrac{e^{ik\textbf{x}}}{(2\pi)^{2/3}} \right)d^3 k  - c^2_s (|k|i)^2\left(\int  \delta\varepsilon_k (t) \dfrac{e^{ik\textbf{x}}d^3 k}{(2\pi)^{2/3}} \right) - 4\pi G\varepsilon_0\left(\int \delta\varepsilon_k (t)  \dfrac{e^{ik\textbf{x}}d^3 k}{(2\pi)^{2/3}} \right) = \sigma (|k|i)^2 \left(\int  \delta S_k  \dfrac{e^{ik\textbf{x}}d^3 k}{(2\pi)^{2/3}} \right)$
+
+$\displaystyle\int \left(\dfrac{\partial^2 \delta\varepsilon_k (t)}{\partial t^2}  \dfrac{e^{ik\textbf{x}}}{(2\pi)^{2/3}} \right)d^3 k  + c^2_s k^2\left(\int  \delta\varepsilon_k (t) \dfrac{e^{ik\textbf{x}}d^3 k}{(2\pi)^{2/3}} \right) - 4\pi G\varepsilon_0\left(\int \delta\varepsilon_k (t)  \dfrac{e^{ik\textbf{x}}d^3 k}{(2\pi)^{2/3}} \right) =- \sigma k^2 \left(\int  \delta S_k  \dfrac{e^{ik\textbf{x}}d^3 k}{(2\pi)^{2/3}} \right)$
+
+$\displaystyle\int \left(\dfrac{\partial^2 \delta\varepsilon_k (t)}{\partial t^2}  \dfrac{e^{ik\textbf{x}}}{(2\pi)^{2/3}} \right)d^3 k  + c^2_s k^2\left(\int  \delta\varepsilon_k (t) \dfrac{e^{ik\textbf{x}}d^3 k}{(2\pi)^{2/3}} \right) - 4\pi G\varepsilon_0\left(\int \delta\varepsilon_k (t)  \dfrac{e^{ik\textbf{x}}d^3 k}{(2\pi)^{2/3}} \right) + \sigma k^2 \left(\int  \delta S_k  \dfrac{e^{ik\textbf{x}}d^3 k}{(2\pi)^{2/3}} \right)=0 $
+
+$$\int \left(\left( \dfrac{\partial^2 \delta\varepsilon_k (t)}{\partial t^2}+ k^2c^2_s\delta\varepsilon_k (t)- 4\pi G\varepsilon_0\delta\varepsilon_k (t) + \sigma k^2\delta S_k\right)   \dfrac{e^{ik\textbf{x}}}{(2\pi)^{2/3}} \right)d^3 k =0 $$
+
+multiplicando por $e^{i\mathbf{k}^\prime x}$
+
+$$e^{i\mathbf{k}^\prime x}\left(\int \left(\left( \dfrac{\partial^2 \delta\varepsilon_k (t)}{\partial t^2}+ k^2c^2_s\delta\varepsilon_k (t)- 4\pi G\varepsilon_0\delta\varepsilon_k (t) + \sigma k^2\delta S_k\right)   \dfrac{e^{ik\textbf{x}}}{(2\pi)^{2/3}} \right)d^3 k \right) =0e^{i\mathbf{k}^\prime x} $$
+
+$$\int \left(\left( \dfrac{\partial^2 \delta\varepsilon_k (t)}{\partial t^2}+ k^2c^2_s\delta\varepsilon_k (t)- 4\pi G\varepsilon_0\delta\varepsilon_k (t) + \sigma k^2\delta S_k\right)  e^{i\mathbf{k}^\prime x} \dfrac{e^{ik\textbf{x}}}{(2\pi)^{2/3}} \right)d^3 k  =0 $$
+
+$$\int \left(\left( \dfrac{\partial^2 \delta\varepsilon_k (t)}{\partial t^2}+ k^2c^2_s\delta\varepsilon_k (t)- 4\pi G\varepsilon_0\delta\varepsilon_k (t) + \sigma k^2\delta S_k\right) \dfrac{e^{i(\mathbf{k}^\prime x+k\textbf{x})}}{(2\pi)^{2/3}} \right)d^3 k  =0 $$
+
+$$\int \left(\left( \dfrac{\partial^2 \delta\varepsilon_k (t)}{\partial t^2}+ k^2c^2_s\delta\varepsilon_k (t)- 4\pi G\varepsilon_0\delta\varepsilon_k (t) + \sigma k^2\delta S_k\right) \dfrac{e^{ix(\mathbf{k}^\prime +k)}}{(2\pi)^{2/3}} \right)d^3 k  =0 $$
+
+integrando os dois lados da igualdade em relação a x defida de $-\infty$ à $\infty$, temos
+
+$$\int^{\infty}_{-\infty} \left( \int \left(\left( \dfrac{\partial^2 \delta\varepsilon_k (t)}{\partial t^2}+ k^2c^2_s\delta\varepsilon_k (t)- 4\pi G\varepsilon_0\delta\varepsilon_k (t) + \sigma k^2\delta S_k\right) \dfrac{e^{ix(\mathbf{k}^\prime +k)}}{(2\pi)^{2/3}} \right)d^3 k \right) dx  =\int^{\infty}_{-\infty}0dx $$
+
+$$ \int \left(\left( \dfrac{\partial^2 \delta\varepsilon_k (t)}{\partial t^2}+ k^2c^2_s\delta\varepsilon_k (t)- 4\pi G\varepsilon_0\delta\varepsilon_k (t) + \sigma k^2\delta S_k\right) \int^{\infty}_{-\infty} \left(\dfrac{e^{ix(\mathbf{k}^\prime +k)}}{(2\pi)^{2/3}} \right)dx  \right)d^3 k  = 0 $$
+
+pela definição do delta de Dirac,  obtemos
+$$ \int \left(\left( \dfrac{\partial^2 \delta\varepsilon_k (t)}{\partial t^2}+ k^2c^2_s\delta\varepsilon_k (t)- 4\pi G\varepsilon_0\delta\varepsilon_k (t) + \sigma k^2\delta S_k\right) (\delta (k^\prime + k))  \right)d^3 k  = 0 $$
+
+$$ \int \left(\delta (k^\prime + k)\left( \dfrac{\partial^2 \delta\varepsilon_k (t)}{\partial t^2}+ k^2c^2_s\delta\varepsilon_k (t)- 4\pi G\varepsilon_0\delta\varepsilon_k (t) + \sigma k^2\delta S_k\right)   \right)d^3 k  = 0 $$
+
+dado que para a integral ser equivalente há zero, o integrando deverá ser igual há 0, logo
+$$\dfrac{\partial^2 \delta\varepsilon_k (t)}{\partial t^2}+ k^2c^2_s\delta\varepsilon_k (t)- 4\pi G\varepsilon_0\delta\varepsilon_k (t) + \sigma k^2\delta S_k = 0 $$
+\begin{equation}
+	\dfrac{\partial^2 (\delta\varepsilon_k (t))}{\partial t^2} +(k^2c^2_s - 4\pi G\varepsilon_0)\delta\varepsilon_k (t) = -\sigma k^2 \delta S_k
+\end{equation} 
+
+A solução geral da equação diferencial pode ser escrita como a soma da solução da equação homogênea com a solução particular independente do tempo da equação (30)
+$$\dfrac{\partial^2 (\delta\varepsilon_k (t))}{\partial t^2} +(k^2c^2_s - 4\pi G\varepsilon_0)\delta\varepsilon_k (t) = -\sigma k^2 \delta S_k$$
+Para a solução independente do tempo $\dfrac{\partial^2 (\delta\varepsilon_k (t))}{\partial t^2} = 0$, então
+
+$$(k^2c^2_s - 4\pi G\varepsilon_0)\delta\varepsilon_k = -\sigma k^2 \delta S_k$$
+\begin{equation}
+	\delta\varepsilon_k  = \dfrac{ -\sigma k^2 \delta S_k}{k^2c^2_s - 4\pi G\varepsilon_0}
+\end{equation}
+
+é chamada de pertubação de entropia. Nota-se que $k to \infty$ quando a gravidade não é relevante, 
+$$\lim_{k \to\infty}\delta\varepsilon_k = \lim_{k \to\infty}\dfrac{ -\sigma k^2 \delta S_k}{k^2c^2_s - 4\pi G\varepsilon_0}$$
+
+$$\lim_{k \to\infty}\delta\varepsilon_k = \lim_{k \to\infty}\dfrac{ -\sigma \delta S_k}{c^2_s}$$
+
+$$\lim_{k \to\infty}\delta\varepsilon_k =-\dfrac{ \sigma \delta S_k}{c^2_s}$$
+Neste caso, a contribuição para a pressão devido à falta de homogeneidade da densidade de energia é exatamente compensada pela contribuição correspondente das perturbações de entropia, de modo que $\delta p = c_s^2 \delta\varepsilon_k + \sigma\delta S_k$ desaparece. 
+
+As perturbações de entropia podem ocorrer apenas em fluidos multicomponentes. Por exemplo, em um fluido que consiste em bárions e radiação, os bárions podem ser distribuídos de forma não homogênea em um fundo homogêneo de radiação. Nesse caso, a entropia, que é igual ao número de fótons por barião, varia de um lugar para outro.
+Assim, encontramos o conjunto completo de modos - dois modos adiabáticos, dois
+modos de vetor e um modo de entropia - descrevendo perturbações em uma gravitação
+meio não expansível homogêneo. O mais interessante é o exponencialmente
+crescente modo adiabático que é responsável pela origem da estrutura no
+universo.
+
+\begin{center}
+	\textbf{6.3 Instabilidade de um universo em expansão}
+\end{center}
+
+Em um universo homogêneo e isotrópico, a densidade de energia é uma função do tempo e a velocidades obedecem a lei de Hubble
+\begin{equation}
+	\varepsilon = \varepsilon_0 (t), \,\,\, \mathbf{V} = \mathbf{V}_0 = \mathbf{H} (t) \mathbf{x}
+\end{equation}
+
+Substituindo essas equações na equação (3), temos
+$$\dfrac{\partial \varepsilon_0}{\partial t} +\nabla \,(\varepsilon_0 \, \textbf{V}) = 0$$
+
+$$\dfrac{\partial \varepsilon_0}{\partial t} +\varepsilon_0\nabla \,( \mathbf{H} \mathbf{x}) = 0$$
+
+$$\dfrac{\partial \varepsilon_0}{\partial t} +\varepsilon_0\mathbf{H}\nabla(\mathbf{x}) = 0$$
+
+Para um universo homogêneo e isotrópico temos $\dfrac{\partial\mathbf{x}}{\partial x}=\dfrac{\partial\mathbf{x}}{\partial y} =\dfrac{\partial\mathbf{x}}{\partial z} = 1$
+
+$$\dfrac{\partial \varepsilon_0}{\partial t} +\mathbf{H}\left(\dfrac{\partial\mathbf{x}}{\partial x}+\dfrac{\partial\mathbf{x}}{\partial y} +\dfrac{\partial\mathbf{x}}{\partial z} \right)\varepsilon_0 = 0$$
+
+$$\dfrac{\partial \varepsilon_0}{\partial t} +3\mathbf{H} \dfrac{\partial\mathbf{x}}{\partial x}\varepsilon_0= 0$$
+
+\begin{equation}
+	\dot{\varepsilon_0} + 3 \mathbf{H}\varepsilon_0 = 0 
+\end{equation}
+
+que afirma matematicamente que a massa com a massa não relativística se conserva. A divergência da equação de Euler (8) juntamente com a equação de Poisson (10) leva a equação de Friedmann 
+
+ $$\dfrac{\partial \textbf{V} }{\partial t} + (\textbf{V} \cdot \nabla ) \textbf{V} + \frac{\nabla p}{\varepsilon} + \nabla \phi =0$$ com $\nabla^2\phi = 4\pi G\varepsilon_0$.
+
+Dado que $\nabla\cdot\mathbf{V} = \nabla \cdot (\mathbf{H}(t)\mathbf{x}) = \mathbf{H}(t) (\nabla\cdot\mathbf{x}) = 3\mathbf{H}(t)$, $\frac{\nabla p}{\varepsilon} = 0$ e
+
+ $(\mathbf{V}\cdot\nabla)\mathbf{V} = (\mathbf{H}\mathbf{x}\cdot\nabla)\mathbf{V}=(\mathbf{H}\mathbf{x}\cdot\dfrac{\partial }{\partial \mathbf{x}})\mathbf{V}= \mathbf{H}\mathbf{V}$, logo
+
+
+$$\dfrac{\partial \textbf{V} }{\partial t} + ( \nabla\cdot\textbf{V} ) \textbf{V}   + \nabla \phi =0$$
+
+$$\dfrac{\partial \textbf{V} }{\partial t} +\mathbf{H}(t)\mathbf{V}  + \nabla \phi =0$$
+
+ $$\nabla\cdot \left(\dfrac{\partial \textbf{V} }{\partial t} +\mathbf{H}(t)\mathbf{V}  + \nabla \phi \right) =\nabla\cdot0$$
  
+$$\nabla\cdot \left(\dfrac{\partial \textbf{V} }{\partial t} \right)+\nabla\cdot \left( \mathbf{H}(t)\mathbf{V} \right)+\nabla\cdot \left(\nabla \phi\right) =0$$
+
+$$ \dfrac{\partial}{\partial t} (\nabla\cdot\textbf{V})  +\nabla\cdot \left( \mathbf{H}(t)\mathbf{V}  \right)+\nabla^2 \phi =0$$	
+
+$$ \dfrac{\partial}{\partial t} (\nabla\cdot\textbf{V})  +\mathbf{H}(t)\nabla\cdot \mathbf{V} +\Delta\phi =0$$
+
+$$ 3\dfrac{\partial\mathbf{H}(t)}{\partial t}  +3\mathbf{H}^2(t) +\Delta\phi =0$$
+
+$$ 3(\dot{\mathbf{H}}  +\mathbf{H}^2(t))  =-\Delta\phi$$
+
+$$ 3(\dot{\mathbf{H}}  +\mathbf{H}^2(t))  =-4\pi G\varepsilon_0$$
+
+\begin{equation}
+	\dot{\mathbf{H}} + \mathbf{H}^2 = - \dfrac{4\pi G}{3}\varepsilon_0 
+\end{equation}
+
+Pertubações ignorando as pertubações de entropia e substituindo as expressões, obtemos
+\begin{equation}
+	\varepsilon = \varepsilon_0 + \delta\varepsilon_0 (\mathbf{x},t),\,\, \mathbf{V} = \mathbf{V}_0 + \delta\mathbf{v} , \phi= \phi_0 + \delta\phi\,\,\, 
+\end{equation}
+
+$$p = p_0 + \delta p= p_0 + c_2^2\delta\varepsilon$$
+
+aplicando nas equações (3), (8) e (10), encontramos as equações lineares para pequenas pertubações
+$$\dfrac{\partial \varepsilon}{\partial t} +\nabla \,(\varepsilon \, \textbf{V}) = 0$$
+
+$$\dfrac{\partial (\varepsilon_0 + \delta\varepsilon_0)}{\partial t} +\nabla \,( (\varepsilon_0 + \delta\varepsilon_0) \, (\mathbf{V}_0 + \delta\mathbf{v})) = 0$$
+
+$$\dfrac{\partial \varepsilon_0}{\partial t} +\dfrac{\partial \delta\varepsilon_0}{\partial t} +\nabla \,( (\varepsilon_0 + \delta\varepsilon_0) \, \mathbf{V}_0) +\nabla \,( (\varepsilon_0 + \delta\varepsilon_0) \, \delta\mathbf{v})= 0$$
+
+$$\dfrac{\partial \varepsilon_0}{\partial t} +\dfrac{\partial \delta\varepsilon_0}{\partial t} +\nabla \,( (\varepsilon_0 + \delta\varepsilon_0) \, \mathbf{V}_0) +\nabla \,( (\varepsilon_0 + \delta\varepsilon_0) \, \delta\mathbf{v})= 0$$
+
+$$\dfrac{\partial \varepsilon_0}{\partial t} +\dfrac{\partial \delta\varepsilon_0}{\partial t} +\varepsilon_0 \nabla\mathbf{V}_0+\nabla \,( \delta\varepsilon_0  \cdot \mathbf{V}_0) +\varepsilon_0\nabla \delta\mathbf{v}+\nabla \, ( \delta\varepsilon_0 \cdot \delta\mathbf{v})= 0$$
+
+Desconsiderando os termos não relacionados há pequenas pertubações temos
+$$\dfrac{\partial \delta\varepsilon_0}{\partial t} +\nabla \,( \delta\varepsilon_0  \cdot \mathbf{V}_0) +\varepsilon_0\nabla \delta\mathbf{v}+\nabla \, ( \delta\varepsilon_0 \cdot \delta\mathbf{v})= 0$$
+
+com  $\nabla \, ( \delta\varepsilon_0 \cdot \delta\mathbf{v}) \to 0$, temos
+
+\begin{equation}
+	\dfrac{\partial\delta\varepsilon}{\partial t} + \varepsilon_0(\nabla\cdot\delta\mathbf{v})+\mathbf{\nabla} (\delta\varepsilon \cdot \mathbf{V}) = 0
+\end{equation}
+\newline
+
+$$\dfrac{\partial \textbf{V} }{\partial t} + (\textbf{V} \cdot \nabla ) \textbf{V} + \frac{\nabla p}{\varepsilon} + \nabla \phi =0$$
+
+$$\dfrac{\partial (\mathbf{V}_0 + \delta\mathbf{v}) }{\partial t} + ((\mathbf{V}_0 + \delta\mathbf{v}) \cdot \nabla ) (\mathbf{V}_0 + \delta\mathbf{v}) + \frac{\nabla (p_0 + c_s^2\delta\varepsilon)}{\varepsilon_0} + \nabla (\phi_0 + \delta\phi) =0$$
+
+$$\dfrac{\partial \mathbf{V}_0 }{\partial t} +\dfrac{\partial \delta\mathbf{v} }{\partial t}+ ((\mathbf{V}_0 + \delta\mathbf{v}) \cdot \nabla )\mathbf{V}_0+ ((\mathbf{V}_0 + \delta\mathbf{v}) \cdot \nabla )\delta\mathbf{v} + \frac{\nabla p_0}{\varepsilon_0}+ \frac{c_s^2\nabla\delta\varepsilon}{\varepsilon_0} + \nabla \phi_0+ \nabla\delta\phi =0$$
+
+$$\dfrac{\partial \mathbf{V}_0 }{\partial t} +\dfrac{\partial \delta\mathbf{v} }{\partial t}+ (\mathbf{V}_0\cdot \nabla + \delta\mathbf{v}\cdot \nabla)\mathbf{V}_0+ (\mathbf{V}_0\cdot \nabla + \delta\mathbf{v}\cdot \nabla) \delta\mathbf{v} + \frac{\nabla p_0}{\varepsilon_0}+ \frac{c_s^2\nabla\delta\varepsilon}{\varepsilon_0} + \nabla \phi_0+ \nabla\delta\phi =0$$
+
+$\displaystyle\dfrac{\partial \mathbf{V}_0 }{\partial t} +\dfrac{\partial \delta\mathbf{v} }{\partial t}+ (\mathbf{V}_0\cdot \nabla)\mathbf{V}_0+ (\delta\mathbf{v}\cdot \nabla)\mathbf{V}_0+ (\mathbf{V}_0\cdot \nabla) \delta\mathbf{v} + (\delta\mathbf{v}\cdot \nabla) \delta\mathbf{v} + \frac{\nabla p_0}{\varepsilon_0}+ \frac{c_s^2\nabla\delta\varepsilon}{\varepsilon_0} + \nabla \phi_0+ \nabla\delta\phi =0$
+
+Desconsiderando os termos não relacionados há pequenas pertubações temos
+
+$$\dfrac{\partial \delta\mathbf{v} }{\partial t}+ (\delta\mathbf{v}\cdot \nabla)\mathbf{V}_0+ (\mathbf{V}_0\cdot \nabla) \delta\mathbf{v} + (\delta\mathbf{v}\cdot \nabla) \delta\mathbf{v} + \frac{c_s^2\nabla\delta\varepsilon}{\varepsilon_0}+ \nabla\delta\phi =0$$
+
+com $(\delta\mathbf{v}\cdot \nabla) \delta\mathbf{v} \to 0$, obtemos
+\begin{equation}
+	\dfrac{\partial\delta\mathbf{v}}{\partial t} + (\mathbf{V}_0 \cdot \nabla)\delta\mathbf{v} + (\delta\mathbf{v} \cdot \nabla) \mathbf{V}_0 + \dfrac{c^2_s}{\varepsilon_0}\nabla\delta\varepsilon + \nabla\delta\phi = 0
+\end{equation}
+\newline
+e
+\begin{equation}
+	\Delta\delta\phi = 4\pi G\delta\varepsilon.
+\end{equation}
+
+A velocidade de Hubble $\mathbf{V}_0$ depende explicitamente de $\mathbf{x}$ e, portanto, da transformada de Fourier em relação às coordenadas eulerianas $\mathbf{x}$ não reduz essas equações a um conjunto desacoplado de equações diferenciais ordinárias. É por isso que é mais conveniente para usar as coordenadas Lagrangianas (comovendo com o fluxo de Hubble) $\mathbf{q}$, que são relacionado com as coordenadas Eulerianas via
+
+\begin{equation}
+	\mathbf{x} = a(t)\mathbf{q}
+\end{equation}
+
+onde $a(t)$ é um fator de escala. A derivada parcial em relação ao tempo tomado em
+constante $\mathbf{x}$ é diferente da derivada parcial tomada na constante $\mathbf{q}$. Para um general função $f (\mathbf{x}, t)$ que temos
+
+\begin{equation}
+	\left( \dfrac{\partial f(\mathbf{x} = a(t)\mathbf{q}\, , t)}{\partial t} \right)_\mathbf{q} = \left( \dfrac{\partial f}{\partial t} \right)_\mathbf{x} + \dot{a}q^i\left( \dfrac{\partial f}{\partial x^i} \right)_t
+\end{equation}
+$$\left( \dfrac{\partial f(\mathbf{x} = a(t)\mathbf{q}\, , t)}{\partial t} \right)_\mathbf{q} = \left( \dfrac{\partial f}{\partial t} \right)_\mathbf{x} + \dfrac{\partial\mathbf{x}}{\partial t}\left( \dfrac{\partial f}{\partial x^i} \right)_t$$
+
+$$\left( \dfrac{\partial f(\mathbf{x} = a(t)\mathbf{q}\, , t)}{\partial t} \right)_\mathbf{q} = \left( \dfrac{\partial f}{\partial t} \right)_\mathbf{x} + \mathbf{V}_0\cdot\nabla_\mathbf{x} f$$
+
+$$\left(\left( \dfrac{\partial }{\partial t} \right)_\mathbf{q}\right)f =\left(\left( \dfrac{\partial }{\partial t} \right)_\mathbf{x} + \mathbf{V}_0\cdot\nabla_\mathbf{x}\right)  f$$
+
+$$\left( \dfrac{\partial }{\partial t} \right)_\mathbf{q} =\left( \dfrac{\partial }{\partial t} \right)_\mathbf{x} + \mathbf{V}_0\cdot\nabla_\mathbf{x}$$
+e portanto
+
+\begin{equation}
+	\left(\dfrac{\partial}{\partial t}\right)_\mathbf{x} = \left( \dfrac{\partial}{\partial t} \right)_\mathbf{q} - (\mathbf{V}_0 \cdot \nabla_\mathbf{x})
+\end{equation}
+
+As derivadas espaciais estão relacionadas de forma mais simples
+
+\begin{equation}
+	\nabla_\mathbf{x} = \dfrac{1}{a}\nabla_\mathbf{q}
+\end{equation}
+
+Substituindo as derivadas em (36)-(38) e introduzindo a amplitude fracionária das pertubações de densidade $\delta\equiv\dfrac{\delta\varepsilon}{\varepsilon_0}$, e finalmente obtemos
+
+$$\dfrac{\partial\delta\varepsilon}{\partial t} + \varepsilon_0(\nabla\cdot\delta\mathbf{v})+\mathbf{\nabla} (\delta\varepsilon \cdot \mathbf{V}) = 0$$
+
+$$\left(\dfrac{\partial(\varepsilon_0\delta)}{\partial t}\right) + \varepsilon_0\nabla_\mathbf{x}\delta\mathbf{v}+\mathbf{\nabla} ((\varepsilon_0\delta) \cdot \mathbf{V}) = 0$$
+
+$$\varepsilon_0\left(\dfrac{\partial(\delta)}{\partial t}\right) + \varepsilon_0\nabla_\mathbf{x}\delta\mathbf{v}+\varepsilon_0\mathbf{\nabla} ((\delta) \cdot \mathbf{V}) = 0$$
+
+$$\left(\dfrac{\partial\delta}{\partial t}\right) + \nabla_\mathbf{x}\delta\mathbf{v} = 0$$
+
+$$\left(\dfrac{\partial\delta}{\partial t}\right) + \dfrac{1}{a}\nabla_\mathbf{q}\delta\mathbf{v} = 0$$
+
+\begin{equation}
+	\left( \dfrac{\partial \delta}{\partial t} \right) + \dfrac{1}{a}(\nabla\cdot\delta\mathbf{v}) = 0
+\end{equation}
+\newline
+
+
+$$\dfrac{\partial\delta\mathbf{v}}{\partial t} + (\mathbf{V}_0 \cdot \nabla)\delta\mathbf{v} + (\delta\mathbf{v} \cdot \nabla) \mathbf{V}_0 + \dfrac{c^2_s}{\varepsilon_0}\nabla\delta\varepsilon + \nabla\delta\phi = 0$$
+
+$$\left( \dfrac{\partial\delta\mathbf{v}}{\partial t} \right) + (\mathbf{V}_0 \cdot \nabla)\delta\mathbf{v} + (\delta\mathbf{v} \cdot \nabla) \mathbf{V}_0 + \dfrac{c^2_s}{\varepsilon_0}\nabla\delta\varepsilon + \nabla\delta\phi = 0$$
+
+$$\left( \dfrac{\partial\delta\mathbf{v}}{\partial t} \right) +H\delta\mathbf{v} + (\delta\mathbf{v} \cdot \nabla_\mathbf{x}) \mathbf{V}_0 + \dfrac{c^2_s}{\varepsilon_0}\nabla_\mathbf{x}\delta\varepsilon + \nabla_\mathbf{x}\delta\phi = 0$$
+
+$$\left( \dfrac{\partial\delta\mathbf{v}}{\partial t} \right) +H\delta\mathbf{v} + c^2_s\nabla_\mathbf{x}\dfrac{\delta\varepsilon}{\varepsilon_0} + \nabla_\mathbf{x}\delta\phi = 0$$
+
+$$\left( \dfrac{\partial\delta\mathbf{v}}{\partial t} \right) +H\delta\mathbf{v} + \dfrac{c^2_s}{a}\nabla_\mathbf{q}\delta + \dfrac{1}{a}\nabla_\mathbf{q}\delta\phi = 0$$
+
+\begin{equation}
+	\left( \dfrac{\partial \delta\mathbf{v}}{\partial t} \right) +H\delta\mathbf{v}+\dfrac{c^2_s}{a}\nabla\delta + \dfrac{1}{a}\nabla\delta\phi =0
+\end{equation}
+\newline
+
+
+$$\Delta\delta\phi = 4\pi G\delta\varepsilon$$
+
+$$\nabla^2_\mathbf{x}\delta\phi = 4\pi G(\varepsilon_0\delta)$$
+
+$$\dfrac{\nabla^2_\mathbf{q}\delta\phi}{a^2} = 4\pi G(\varepsilon_0\delta)$$
+
+\begin{equation}
+	\Delta\delta\phi = 4\pi Ga^2\varepsilon_0\delta
+\end{equation}
+
+onde $\nabla\equiv\nabla_\mathbf{q}$ e $\Delta$ agora são as derivadas em relação às coordenadas de Lagrange $\mathbf{q}$ e as derivadas de tempo são tomadas na constante $\mathbf{q}$. Ao derivar (43), temos usado (33) para o fundo e observou que $\nabla\cdot\mathbf{V}_0 = 3\mathbf{H}(t)$ e $(\delta\mathbf{v}\cdot\nabla\mathbf{x}) \mathbf{V}_0 = H\delta\mathbf{v}$.
+Tomando a divergência de (44) e usando as equações de continuidade e Poisson para
+expressar $(\nabla\cdot\delta\mathbf{v})$ e $\delta\phi$ em termos de $\delta$, derivamos a equação de forma fechada.
+
+Com as equações (43) podemos obter as seguintes relações
+$$\left( \dfrac{\partial \delta}{\partial t} \right) + \dfrac{1}{a}\nabla_\mathbf{q}\delta\mathbf{v} = 0$$
+
+$$\left( \dfrac{\partial \delta}{\partial t} \right)   = -\dfrac{1}{a}\nabla_\mathbf{q}\delta\mathbf{v}$$
+\newline
+
+$$\dfrac{\partial}{\partial t}\left( \dfrac{\partial \delta}{\partial t}  + \dfrac{1}{a}\nabla_\mathbf{q}\delta\mathbf{v} \right)= 0$$
+
+$$\dfrac{\partial^2 \delta}{\partial t^2} + \dfrac{\partial}{\partial t}\left( \dfrac{1}{a}\nabla_\mathbf{q}\delta\mathbf{v} \right)= 0$$
+
+$$\dfrac{\partial^2 \delta}{\partial t^2} + \dfrac{ \dfrac{1}{a}\dfrac{\partial}{\partial t }(\nabla_\mathbf{q}\cdot\delta\mathbf{v})- \dfrac{\partial a}{\partial t}(\nabla_\mathbf{q}\cdot\delta\mathbf{v})}{a^2} = 0$$
+
+como $\dfrac{\partial a}{\partial t}=a\mathbf{H}$, portanto
+
+$$\dfrac{\partial^2 \delta}{\partial t^2} +  \dfrac{1}{a}\dfrac{\partial}{\partial t }(\nabla_\mathbf{q}\cdot\delta\mathbf{v})-  \dfrac{a\mathbf{H}}{a^2}(\nabla_\mathbf{q}\cdot\delta\mathbf{v}) = 0$$
+
+$$\dfrac{1}{a}\dfrac{\partial}{\partial t }(\nabla_\mathbf{q}\cdot\delta\mathbf{v})= -\dfrac{\partial^2 \delta}{\partial t^2} + \dfrac{\mathbf{H}}{a}(\nabla_\mathbf{q}\cdot\delta\mathbf{v})$$
+
+$$\dfrac{1}{a}\dfrac{\partial}{\partial t }(\nabla_\mathbf{q}\cdot\delta\mathbf{v})= -\dfrac{\partial^2 \delta}{\partial t^2} -\mathbf{H} \dfrac{\partial\delta}{\partial t}$$
+
+com as relações a cima, prosseguimos dessa forma
+$$\nabla_\mathbf{x}\cdot\left( \dfrac{\partial \delta\mathbf{v}}{\partial t}  +\mathbf{H}\delta\mathbf{v}+\dfrac{c^2_s}{a}\nabla_\mathbf{x}\delta + \dfrac{1}{a}\nabla_\mathbf{q}\delta\phi \right)=\nabla_\mathbf{x}\cdot0$$
+
+$$\nabla_\mathbf{x}\cdot\left( \dfrac{\partial \delta\mathbf{v}}{\partial t}  \right)+\nabla_\mathbf{x}\cdot\left( \mathbf{H}\delta\mathbf{v}\right)+\nabla_\mathbf{x}\cdot\left( \dfrac{c^2_s}{a}\nabla_\mathbf{q}\delta\right)+\nabla_\mathbf{x}\cdot\left(  \dfrac{1}{a}\nabla_\mathbf{x}\delta\phi \right)=0$$
+
+$$\dfrac{1}{a}\dfrac{\partial (\nabla_\mathbf{q}\cdot\delta\mathbf{v})}{\partial t}  + \dfrac{\mathbf{H}}{a}(\nabla_\mathbf{q}\cdot\delta\mathbf{v}) + \dfrac{c^2_s}{a^2}\nabla^2_\mathbf{q}\delta+ \dfrac{1}{a^2}\nabla^2_\mathbf{q}\delta\phi =0$$
+
+$$ -\dfrac{\partial^2 \delta}{\partial t^2} -\mathbf{H} \dfrac{\partial\delta}{\partial t}  -\mathbf{H}\dfrac{\partial\delta}{\partial t} + \dfrac{c^2_s}{a^2}\nabla^2_\mathbf{q}\delta+ \dfrac{1}{a^2}(4\pi Ga^2\varepsilon_0\delta)=0$$
+
+$$ -\dfrac{\partial^2 \delta}{\partial t^2} -2\mathbf{H} \dfrac{\partial\delta}{\partial t} + \dfrac{c^2_s}{a^2}\nabla^2_\mathbf{q}\delta+ 4\pi G\varepsilon_0\delta=0$$
+
+\begin{equation}
+	\ddot{\delta} + 2\mathbf{H}\dot{\delta} - \dfrac{c^2_s}{a^2}\Delta\delta - 4\pi G\varepsilon_0\delta = 0
+\end{equation}
+que descreve a instabilidade gravitacional em um universo em expansão.
+
+
+\begin{center}
+	\textbf{6.3.1 Pertubações Adiabáticas}
+\end{center}
+Tomando a transformada de Fourier da equação (46) para as coordenadas comoventes $\mathbf{q}$,
+
+$$\delta = \int \delta_\mathbf{k} (t)e^{i\mathbf{k}\mathbf{q}}\dfrac{d^3k}{(2\pi)^{3/2}}$$
+
+$\displaystyle\dfrac{\partial^2}{\partial t^2}\left(\int \delta_\mathbf{k} (t)e^{i\mathbf{k}\mathbf{q}}\dfrac{d^3k}{(2\pi)^{3/2}}\right) + 2\mathbf{H}\dfrac{\partial}{\partial t}\left(\int \delta_\mathbf{k} (t)e^{i\mathbf{k}\mathbf{q}}\dfrac{d^3k}{(2\pi)^{3/2}}\right) - \dfrac{c^2_s}{a^2}\Delta\left(\int \delta_\mathbf{k} (t)e^{i\mathbf{k}\mathbf{q}}\dfrac{d^3k}{(2\pi)^{3/2}}\right)- 4\pi G\varepsilon_0\left(\int \delta_\mathbf{k} (t)e^{i\mathbf{k}\mathbf{q}}\dfrac{d^3k}{(2\pi)^{3/2}}\right) $
+
+$=0$
+
+$$\int \left(\dfrac{\partial^2\delta_\mathbf{k}(t)}{\partial t^2}+ 2\mathbf{H}\dfrac{\partial\delta_\mathbf{k}(t)}{\partial t}  - 4\pi G\varepsilon_0\delta_\mathbf{k}(t) \right) e^{i\mathbf{k}\mathbf{q}}\dfrac{d^3k}{(2\pi)^{3/2}} - \dfrac{c^2_s}{a^2}\left(\int \Delta\delta_\mathbf{k} (t)e^{i\mathbf{k}\mathbf{q}}\dfrac{d^3k}{(2\pi)^{3/2}}\right)=0 $$
+
+$$\int \left(\dfrac{\partial^2\delta_\mathbf{k}(t)}{\partial t^2}+ 2\mathbf{H}\dfrac{\partial\delta_\mathbf{k}(t)}{\partial t}  - 4\pi G\varepsilon_0\delta_\mathbf{k}(t) \right) e^{i\mathbf{k}\mathbf{q}}\dfrac{d^3k}{(2\pi)^{3/2}} - \dfrac{c^2_s(|k|i)^2}{a^2}\left(\int \delta_\mathbf{k} (t)e^{i\mathbf{k}\mathbf{q}}\dfrac{d^3k}{(2\pi)^{3/2}}\right)=0 $$
+
+$$\int \left(\dfrac{\partial^2\delta_\mathbf{k}(t)}{\partial t^2}+ 2\mathbf{H}\dfrac{\partial\delta_\mathbf{k}(t)}{\partial t}  - 4\pi G\varepsilon_0\delta_\mathbf{k}(t) \right) e^{i\mathbf{k}\mathbf{q}}\dfrac{d^3k}{(2\pi)^{3/2}} + \dfrac{c^2_sk^2}{a^2}\left(\int \delta_\mathbf{k} (t)e^{i\mathbf{k}\mathbf{q}}\dfrac{d^3k}{(2\pi)^{3/2}}\right)=0 $$
+
+$$\int \left(\dfrac{\partial^2\delta_\mathbf{k}(t)}{\partial t^2}+ 2\mathbf{H}\dfrac{\partial\delta_\mathbf{k}(t)}{\partial t} + \dfrac{c^2_sk^2}{a^2}\delta_\mathbf{k}(t) - 4\pi G\varepsilon_0\delta_\mathbf{k}(t) \right) e^{i\mathbf{k}\mathbf{q}}\dfrac{d^3k}{(2\pi)^{3/2}} =0 $$
+
+$$\int \left(\dfrac{\partial^2\delta_\mathbf{k}(t)}{\partial t^2}+ 2\mathbf{H}\dfrac{\partial\delta_\mathbf{k}(t)}{\partial t} +( \dfrac{c^2_sk^2}{a^2} - 4\pi G\varepsilon_0)\delta_\mathbf{k}(t) \right) e^{i\mathbf{k}\mathbf{q}}\dfrac{d^3k}{(2\pi)^{3/2}} =0 $$
+
+multiplicando por $e^{i\mathbf{k}^\prime\mathbf{q}}$
+$$e^{i\mathbf{k}^\prime\mathbf{q}}\left(\int \left(\dfrac{\partial^2\delta_\mathbf{k}(t)}{\partial t^2}+ 2\mathbf{H}\dfrac{\partial\delta_\mathbf{k}(t)}{\partial t} +( \dfrac{c^2_sk^2}{a^2} - 4\pi G\varepsilon_0)\delta_\mathbf{k}(t) \right) e^{i\mathbf{k}\mathbf{q}}\dfrac{d^3k}{(2\pi)^{3/2}}\right) =0e^{i\mathbf{k}^\prime\mathbf{q}} $$
+
+$$\int \left(\dfrac{\partial^2\delta_\mathbf{k}(t)}{\partial t^2}+ 2\mathbf{H}\dfrac{\partial\delta_\mathbf{k}(t)}{\partial t} +( \dfrac{c^2_sk^2}{a^2} - 4\pi G\varepsilon_0)\delta_\mathbf{k}(t) \right) e^{i\mathbf{q}(\mathbf{k}+\mathbf{k}^\prime)}\dfrac{d^3k}{(2\pi)^{3/2}} =0 $$
+realizando a integral definida de $\mathbf{q}$, temos
+
+$$\int\left( \int \left(\dfrac{\partial^2\delta_\mathbf{k}(t)}{\partial t^2}+ 2\mathbf{H}\dfrac{\partial\delta_\mathbf{k}(t)}{\partial t} +( \dfrac{c^2_sk^2}{a^2} - 4\pi G\varepsilon_0)\delta_\mathbf{k}(t) \right) e^{i\mathbf{q}(\mathbf{k}+\mathbf{k}^\prime)}\dfrac{d^3k}{(2\pi)^{3/2}} \right)d\mathbf{q} =\int0d\mathbf{q} $$
+
+$$ \int \left(\dfrac{\partial^2\delta_\mathbf{k}(t)}{\partial t^2}+ 2\mathbf{H}\dfrac{\partial\delta_\mathbf{k}(t)}{\partial t} +( \dfrac{c^2_sk^2}{a^2} - 4\pi G\varepsilon_0)\delta_\mathbf{k}(t) \right) \int\left(e^{i\mathbf{q}(\mathbf{k}+\mathbf{k}^\prime)}\dfrac{d\mathbf{q}}{(2\pi)^{3/2}} \right)d^3k =0 $$
+
+$$ \int \left(\dfrac{\partial^2\delta_\mathbf{k}(t)}{\partial t^2}+ 2\mathbf{H}\dfrac{\partial\delta_\mathbf{k}(t)}{\partial t} +( \dfrac{c^2_sk^2}{a^2} - 4\pi G\varepsilon_0)\delta_\mathbf{k}(t) \right) \delta(\mathbf{k}+\mathbf{k}^\prime)d^3k =0 $$
+
+$$\int\delta(\mathbf{k}+\mathbf{k}^\prime)\left(\dfrac{\partial^2\delta_\mathbf{k}(t)}{\partial t^2}+ 2\mathbf{H}\dfrac{\partial\delta_\mathbf{k}(t)}{\partial t} +( \dfrac{c^2_sk^2}{a^2} - 4\pi G\varepsilon_0)\delta_\mathbf{k}(t) \right) d^3k =0 $$
+sabendo que o integrando deve ser equivalente a zero para que o resultado da integração ser igual a zero, assim obtemos a equação diferencial ordinária
  
- 
- 
- 
- 
- 
- 
+\begin{equation}
+	\ddot{\delta_\mathbf{k}} + 2\mathbf{H}\dot{\delta_\mathbf{k}} + \left( \dfrac{c^2_s k^2}{a^2} -4\pi G\varepsilon_0\right)\delta_\mathbf{k} = 0
+\end{equation}
+
+O comportamento de cada perturbação depende crucialmente de seu tamanho espacial; a escala de comprimento crítica é o comprimento de jeans
+
+
+
 \end{document}
