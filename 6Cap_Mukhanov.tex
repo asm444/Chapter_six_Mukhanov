@@ -758,10 +758,68 @@ Em um universo plano dominado pela matéria, $a \propto t^{2/3}$e $H \propto t^{
 
 Portanto, vemos que em um universo em expansão, a instabilidade gravitacional é muito menor
 eficiente e a amplitude da perturbação aumenta apenas com a potência do tempo. No caso importante de um universo plano, dominado pela matéria, o modo de crescimento é proporcional
-ao fator de escala. Portanto, se quisermos obter grandes inomogeneidades δ 1
-hoje, temos que assumir que nos primeiros tempos (por exemplo, em redshifts z = 1000) o
-as inomogeneidades já eram substanciais (δ 10−3). Isso impõe bastante forte
-restrições no espectro inicial de perturbações. Veremos no Capítulo 8 que
-o espectro inicial necessário pode ser explicado naturalmente na cosmologia inflacionária.
+ao fator de escala. Portanto, se quisermos obter grandes inomogeneidades ($\delta \gtrsim 1$) hoje, temos que assumir que nos primeiros tempos (por exemplo, em redshifts $z = 1000$)
+as inomogeneidades já eram substanciais ($\delta \gtrsim 10^{-3}$). Isso impõe fortes
+restrições no espectro inicial de perturbações.
+\newline
+
+\begin{center}
+	\textbf{Vetor de Pertubações}
+\end{center}
+Substituindo $\delta =0 $ nas equações (43)-(45), obtemos
+$$\dfrac{\partial (0)}{\partial t} + \dfrac{1}{a}\nabla\delta\mathbf{v} = 0$$
+
+$$\nabla\delta\mathbf{v} = 0$$
+\newline
+
+$$\Delta\delta\phi = 4\pi Ga^2\varepsilon_0 (0)$$
+
+$$\Delta\delta\phi = 0$$
+\newline
+
+$$\dfrac{\partial\delta\mathbf{v}}{\partial t} + H\delta\mathbf{v} + \dfrac{c^2_s}{a}\nabla(0) +\dfrac{1}{a}(0) = 0$$
+
+$$\dfrac{\partial\delta\mathbf{v}}{\partial t} + H\delta\mathbf{v} = 0$$
+\newline
+
+\begin{equation}
+	\nabla\delta\mathbf{v} = 0 , \quad \dfrac{\partial\delta\mathbf{v}}{\partial t } + H\delta\mathbf{v} = 0
+\end{equation}
+
+Da primeira equação segue que para uma perturbação de onda plana, $\delta\mathbf{v} \propto \delta\mathbf{v}_\mathbf{k} (t)e^{(i\mathbf{kq})}$, a velocidade peculiar $\delta\mathbf{v}$ é perpendicular ao número de onda $\mathbf{k}$. A segunda equação torna-se
+
+\begin{equation}
+	\delta\dot{\mathbf{v}_\mathbf{k}} + \dfrac{\dot{a}}{a}\delta\\mathbf{v}_\mathbf{k}=0,
+\end{equation}
+
+e tem a solução $\delta\mathbf{v_k} \propto \frac{1}{a}$. Assim, as perturbações do vetor decaem conforme o
+o universo se expande. Essas perturbações podem ter amplitudes significativas no presente
+apenas se suas amplitudes iniciais fossem tão grandes que estragassem completamente a isotropia do universo primordial. Em um universo inflacionário, não há espaço para tão grande
+perturbações vetoriais primordiais e não desempenham qualquer papel na formação de
+a estrutura em grande escala do universo. Perturbações de vetor, no entanto, podem ser
+gerado tardiamente, após a estrutura não linear ter sido formada, e pode explicar
+a rotação das galáxias.
+
+\begin{center}
+	\textbf{6.3.3 Solução Auto-similar}
+\end{center}
+Para perturbações de grande escala, podemos negligenciar a pressão e as derivadas espaciais
+desistir de (46). Neste caso, a solução para as perturbações pode ser escrita diretamente
+no espaço de coordenadas
+
+\begin{equation}
+	\delta (\mathbf{q},t ) = A(\mathbf{q}) \delta_i (t)+B(\mathbf{q})\delta_d (t),
+\end{equation}
+onde $\delta_i$ e $\delta_d$ são modos crescente e decrescente, respectivamente. Sem perder
+generalidade, podemos definir $\delta_i (t_0) = \delta_d (t_0) = 1$ em algum momento inicial de tempo $t_0$. Se o
+distribuição de densidade neste momento é descrita pela função $\delta(\mathbf{q}, t_0)$ e a matéria
+está em repouso em relação ao fluxo de Hubble ($\delta\mathbf{v} \propto \delta (\mathbf{q}, t_0) = 0$), então, expressando $A (q)$
+e $B (\mathbf{q})$ em termos de $\delta (\mathbf{q}, t0)$, obtemos
+
+\begin{equation}
+	\delta (\mathbf{q},t) = \delta (\mathbf{q}, t_0)\left( \dfrac{\delta_i(t)}{1 - (\dot{\delta_i}/\dot{\delta_d})_{t_0}} + \dfrac{\delta_d(t)}{1 - (\dot{\delta_d}/\dot{\delta_i})_{t_0}}\right)
+\end{equation}
+
+
 
 \end{document}
