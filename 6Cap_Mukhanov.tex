@@ -867,8 +867,30 @@ $$H^2 = \dfrac{8\pi G}{3}\left(\dfrac{\varepsilon_{eq}}{2}\left( \left( \dfrac{a
 
 $$H^2 = \dfrac{8\pi G\varepsilon_{eq}}{6}\left( x^{-3} +x^{-3 (1+w)}\right)$$
 
+
+pela normalização $x\equiv \dfrac{a}{a_{eq}}$, podemos encontrar a relação de troca de variavel t para x ao obter a derivada de x em relação a t.
+
+$$\dfrac{\partial x}{\partial t}= \dfrac{\partial}{\partial t}\left( \dfrac{a}{a_{eq}}\right) $$
+
+como $a_{eq}$ é constante
+$$\dot{x}= \dfrac{1}{a_{eq}} \dfrac{\partial a}{\partial t}= \dfrac{a H}{a_{eq}} = xH,$$
+
+rescrevendo  $\dfrac{\partial \delta}{\partial t }$ em termos de x, temos
+
+$$\dfrac{\partial \delta}{\partial t } = \dfrac{\partial x}{\partial t } \dfrac{\partial \delta}{\partial x }= xH \dfrac{d \delta}{d x },$$
+
+rescrevendo $\dfrac{\partial^2 \delta}{\partial t^2}$ em termos de x ,temos
+
+$$\dfrac{\partial^2 \delta}{\partial t^2} = \dfrac{\partial }{\partial t }\left(xH \dfrac{d \delta}{d x } \right)= \dfrac{\partial (xH) }{\partial t }\dfrac{d \delta}{d x } + xH\dfrac{\partial }{\partial t }\left( \dfrac{d \delta}{d x } \right)$$
+
+$$\dfrac{\partial^2 \delta}{\partial t^2} =\dfrac{\partial (x) }{\partial t }\dfrac{d(xH) }{dx }\dfrac{d \delta}{d x } + xH\dfrac{\partial x}{\partial t }\dfrac{d}{dx }\left( \dfrac{d \delta}{d x } \right)$$
+
+$$\dfrac{\partial^2 \delta}{\partial t^2} = xH\dfrac{d \delta}{d x }\left( \dfrac{Hd(x) }{dx } + x\dfrac{dH }{dx }\right) + x^2H^2 \dfrac{d^2 \delta}{d x^2 }$$
+
+$$\dfrac{\partial^2 \delta}{\partial t^2} = xH\dfrac{d \delta}{d x }\left( H + x\dfrac{dH }{dx }\right) + x^2H^2 \dfrac{d^2 \delta}{d x^2 }$$
+
 (46) torna-se
-$$\ddot{\delta} + 2H\dot{\delta} -\dfrac{c^2_s}{a^2}\Delta\delta -4\pi G\varepsilon_0\delta = 0$$
+$$\ddot{\delta} + 2H\dot{\delta}  -4\pi G\varepsilon_{tot}\delta = 0$$
 
 
 \begin{equation}
