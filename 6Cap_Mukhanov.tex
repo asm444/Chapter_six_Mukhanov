@@ -699,7 +699,69 @@ outra solução independente $\delta_i$ pode ser facilmente encontrada com a aju
 
 Tomando a derivada do Wronskiano e usando (47) para expressar $\ddot{\delta}$ em termos de $\dot{\delta}$ e $\delta$, descobrimos que $W$ satisfaz a equação
 
+
+$$W \equiv \dot{\delta_d} \delta_i - \dot{\delta_i} \delta_d$$
+
+$$\dfrac{\partial W }{\partial t}= \dfrac{\partial  }{\partial t}\left(\dot{\delta_d} \delta_i - \dot{\delta_i} \delta_d \right)$$
+
+$$\dfrac{\partial W }{\partial t}= \dfrac{\partial  }{\partial t}\left(\dot{\delta_d} \delta_i  \right)-\dfrac{\partial  }{\partial t}\left(\dot{\delta_i} \delta_d \right)$$
+
+$$\dot{W}= \delta_i\dfrac{\partial  \dot{\delta_d}}{\partial t}+\dot{\delta_d}\dfrac{\partial \delta_i }{\partial t}-\delta_d\dfrac{\partial  \dot{\delta_i} }{\partial t}-\dot{\delta_i}\dfrac{\partial \delta_d }{\partial t}$$
+
+$$\dot{W}= \delta_i\ddot{\delta_d}-\delta_d\ddot{\delta_i}$$
+
+Sabendo que $\delta_d$ e $\delta_i$ satisfazem a equação (46), isto é,
+$$\ddot{\delta_d} + 2\mathbf{H}\dot{\delta_d} + \left( \dfrac{c^2_s k^2}{a^2} -4\pi G\varepsilon_0\right)\delta_d = 0 $$
+e
+$$\ddot{\delta_i} + 2\mathbf{H}\dot{\delta_i} + \left( \dfrac{c^2_s k^2}{a^2} -4\pi G\varepsilon_0\right)\delta_i = 0$$
+portanto substituindo 
+$$\ddot{\delta_d} = - 2\mathbf{H}\dot{\delta_d} - \left( \dfrac{c^2_s k^2}{a^2} -4\pi G\varepsilon_0\right)\delta_d  $$
+
+$$\ddot{\delta_i}  = - 2\mathbf{H}\dot{\delta_i} - \left( \dfrac{c^2_s k^2}{a^2} -4\pi G\varepsilon_0\right)\delta_i$$
+temos
+$$\dot{W}= \delta_i\left(- 2\mathbf{H}\dot{\delta_d} - \left( \dfrac{c^2_s k^2}{a^2} -4\pi G\varepsilon_0\right)\delta_d  \right)-\delta_d\left( - 2\mathbf{H}\dot{\delta_i} - \left( \dfrac{c^2_s k^2}{a^2} -4\pi G\varepsilon_0\right)\delta_i\right)$$
+
+$$\dot{W}=  -2\mathbf{H}\delta_i\dot{\delta_d} +2\mathbf{H}\delta_d \dot{\delta_i} $$
+
 \begin{equation}
 	\dot{W} = -2H W
 \end{equation}
+
+que possui a seguinte solução
+
+\begin{equation}
+	W \equiv \dot{\delta_d} \delta_i - \dot{\delta_i} \delta_d = \dfrac{C}{a^2}
+\end{equation}
+
+onde C é uma constante de integração. Substituindo o $\delta_i = \delta_d f (t)$ em (53), obtemos uma equação para $f$ que é prontamente integrada:
+
+$$\dot{\delta_d} (\delta_d f(t)) - \dfrac{\partial(\delta_d f(t))}{\partial t} \delta_d = \dfrac{C}{a^2}$$
+
+$$\dot{\delta_d}f(t) - \delta_d\dfrac{\partial f(t)}{\partial t} -f(t)\dfrac{\partial\delta_d }{\partial t}= \dfrac{C}{a^2\delta_d}$$
+
+$$- \delta_d\dfrac{\partial f(t)}{\partial t} = \dfrac{C}{a^2\delta_d}$$
+
+\begin{equation}
+	f = - \int \dfrac{C}{a^2\delta_d^2}dt.
+\end{equation}
+Assim, a solução de onda longa mais geral de (47) é
+
+\begin{equation}
+	\delta = C_1 H \int \dfrac{dt}{a^2H^2} + C_2 H.
+\end{equation}
+
+Em um universo plano dominado pela matéria, $a \propto t^{2/3}$e $H \propto t^{-1}$. Neste caso, temos
+
+\begin{equation}
+	\delta = C_1 t^{2/3} + C_2 t^{-1}.
+\end{equation}
+
+Portanto, vemos que em um universo em expansão, a instabilidade gravitacional é muito menor
+eficiente e a amplitude da perturbação aumenta apenas com a potência do tempo. No caso importante de um universo plano, dominado pela matéria, o modo de crescimento é proporcional
+ao fator de escala. Portanto, se quisermos obter grandes inomogeneidades δ 1
+hoje, temos que assumir que nos primeiros tempos (por exemplo, em redshifts z = 1000) o
+as inomogeneidades já eram substanciais (δ 10−3). Isso impõe bastante forte
+restrições no espectro inicial de perturbações. Veremos no Capítulo 8 que
+o espectro inicial necessário pode ser explicado naturalmente na cosmologia inflacionária.
+
 \end{document}
