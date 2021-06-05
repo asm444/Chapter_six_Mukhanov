@@ -820,6 +820,58 @@ e $B (\mathbf{q})$ em termos de $\delta (\mathbf{q}, t0)$, obtemos
 	\delta (\mathbf{q},t) = \delta (\mathbf{q}, t_0)\left( \dfrac{\delta_i(t)}{1 - (\dot{\delta_i}/\dot{\delta_d})_{t_0}} + \dfrac{\delta_d(t)}{1 - (\dot{\delta_d}/\dot{\delta_i})_{t_0}}\right)
 \end{equation}
 
+Neste caso particular, a perturbação preserva sua forma espacial inicial à medida que se desenvolve. Essa solução é considerada semelhante a si mesma.
+Genericamente, a forma de não homogeneidade muda. No entanto, em horários tardios ($t \gg t_0$)
+quando o modo de crescimento dominar, podemos omitir o segundo termo em (59) e o
+a perturbação linear cresce de maneira auto-semelhante.
+\newline
+
+\begin{center}
+	\textbf{6.3.4 Matéria fria na presença de radiação ou energia escura}
+\end{center}
+
+Há evidências convincentes de que junto com a matéria fria do universo lá
+existe um componente de energia escura suave. Esta energia escura muda a taxa de expansão e, como resultado, influência o crescimento de heterogeneidades na matéria fria.
+Para estudar a instabilidade gravitacional na presença de matéria relativística, em princípio, precisamos da teoria relativística completa. No entanto, em escalas menores do que o comprimento jeans
+para a matéria relativística, que é comparável à escala do horizonte, as inomogeneidades na distribuição da matéria fria não perturbam o componente relativístico.
+e permanece praticamente homogêneo. Como resultado, ainda podemos aplicar modificações da
+teoria Newtoniana às perturbações na própria matéria fria em escalas menores
+do que o horizonte. A seguir, consideramos o crescimento das perturbações na
+presença de um componente de energia relativística homogênea. Isso pode ser radiação,
+com equação de estado $w = 1/3$, ou matéria escura com $w < - 1/3$.
+
+É fácil verificar que a equação para a perturbação na componente fria
+sozinho, $\delta \equiv \delta\varepsilon_d / \varepsilon_d$, coincide com (46), mas a constante de Hubble agora é determinada
+pela densidade total de energia
+
+\begin{equation}
+	\varepsilon_{tot} = \dfrac{\varepsilon_{eq}}{2}\left( \left( \dfrac{a_{eq}}{a}\right)^3 + \left(\dfrac{a_{eq}}{a} \right)^{3 (1+w)}\right),
+\end{equation}
+
+através da relação usual, que para um universo plano é 
+\begin{equation}
+	H^2 = \dfrac{8\pi G}{3}\varepsilon_{tot}.
+\end{equation}
+Aqui um $a_{eq}$ é o fator de escala em “igualdade” quando as densidades de energia de ambos as componentes são iguais. Para encontrar as soluções explícitas de (46), é conveniente reescrevê-lo
+usando como uma variável de tempo o fator de escala normalizado $x \equiv a / a_{eq}$ em vez de $t$. Tirando
+em consideração que $\varepsilon_0$ entrando em (46) é a densidade de matéria fria sozinha, igual a
+
+\begin{equation}
+	\varepsilon_d = \dfrac{\varepsilon_{eq}}{2}\left(\dfrac{a_{eq}}{a}\right)^3.
+\end{equation}
+e usando (62) para expressar o parâmetro de Hubble em termos de $x$, temos
+
+$$H^2 = \dfrac{8\pi G}{3}\varepsilon_{tot}$$
+
+$$H^2 = \dfrac{8\pi G}{3}\left(\dfrac{\varepsilon_{eq}}{2}\left( \left( \dfrac{a_{eq}}{a}\right)^3 + \left(\dfrac{a_{eq}}{a} \right)^{3 (1+w)}\right)\right)$$
+
+$$H^2 = \dfrac{8\pi G\varepsilon_{eq}}{6}\left( x^{-3} +x^{-3 (1+w)}\right)$$
+
+(46) torna-se
+$$\ddot{\delta} + 2H\dot{\delta} -\dfrac{c^2_s}{a^2}\Delta\delta -4\pi G\varepsilon_0\delta = 0$$
 
 
+\begin{equation}
+	x^2 (1+x^{-3w})\dfrac{d^2\delta}{dx^2} + \dfrac{3}{2}x(1+ (1+w)x^{-3w})\dfrac{d\delta}{dt} - \dfrac{3}{2}\delta = 0
+\end{equation}
 \end{document}
