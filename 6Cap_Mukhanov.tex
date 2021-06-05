@@ -674,6 +674,32 @@ Perturbações em escalas muito menores do que o comprimento de jeans ($\lambda 
 \begin{equation}
 	\delta_\mathbf{k} \propto \dfrac{1}{\sqrt{c_s a}} \,exp\left( \pm k \int \dfrac{c_s dt}{a}\right)
 \end{equation}
-kjbkj
 
+Em escalas muito maiores do que a escala de Jeans ($\lambda \gg \lambda_J$), a gravidade domina e nós
+pode negligenciar o termo dependente de k em (47). Então, uma das soluções é simplesmente
+proporcional à constante de Hubble $H (t)$. Na verdade, substituindo $\delta_d = H (t)$ em (47),
+onde definimos $c^2_s k^2 = 0$, descobre-se que a equação resultante coincide com o tempo
+derivada da equação de Friedmann (34). Observe que $\delta_d = H (t)$ é o decaimento
+solução da equação de perturbação (H diminui com o tempo) em um dominado pela matéria
+universo com curvatura arbitrária.
+
+Tanto a densidade de energia de fundo $\varepsilon_0 (t)$ quanto a energia deslocada no tempo
+densidade $\varepsilon_0 (t + \tau)$, onde $\tau =$ const, satisfaça (33), (34). Na verdade, usando (33)
+para expressar H em termos de $\varepsilon_0$ e substituí-lo em (34), obtemos uma equação para $\varepsilon_0 (t)$ em que o tempo não aparece explicitamente. Portanto, sua solução é invariante no tempo e invariante a translação. Para $\tau$ pequeno, a solução deslocada no tempo $\varepsilon_0 (t+ \tau)$ pode ser
+considerado como uma perturbação do fundo $\varepsilon_0 (t)$ com amplitude
+
+$$\delta_d = \dfrac{\varepsilon_0 (t+ \tau) -\varepsilon_0 (t) }{\varepsilon_0 (t)} \approx \dfrac{\dot{\varepsilon_0} (t)\tau }{\varepsilon_0 (t)} \propto H(t)$$.
+
+Uma vez que conhecemos uma solução da equação diferencial de segunda ordem, $\delta_d$, então o
+outra solução independente $\delta_i$ pode ser facilmente encontrada com a ajuda do Wronskiano
+
+\begin{equation}
+	W \equiv \dot{\delta_d} \delta_i - \dot{\delta_i} \delta_d
+\end{equation}
+
+Tomando a derivada do Wronskiano e usando (47) para expressar $\ddot{\delta}$ em termos de $\dot{\delta}$ e $\delta$, descobrimos que $W$ satisfaz a equação
+
+\begin{equation}
+	\dot{W} = -2H W
+\end{equation}
 \end{document}
