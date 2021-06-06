@@ -879,6 +879,15 @@ rescrevendo  $\dfrac{\partial \delta}{\partial t }$ em termos de x, temos
 
 $$\dfrac{\partial \delta}{\partial t } = \dfrac{\partial x}{\partial t } \dfrac{\partial \delta}{\partial x }= xH \dfrac{d \delta}{d x },$$
 
+rescrevendo a constante de Hubble em termos de x, temos
+$$H^2 = \dfrac{8\pi G}{6}\varepsilon_{eq}\left( x^{-3} +x^{-3 (1+w)}\right)$$
+
+$$H^2 = \dfrac{8\pi G}{6}\left( 2\varepsilon_{d}x^3\right)\left( x^{-3} +x^{-3 (1+w)}\right)$$
+
+$$H^2 = \dfrac{8\pi G\varepsilon_{d}}{3}\left( 1 +x^{-3w}\right)$$
+
+$$H = \sqrt{\dfrac{8\pi G\varepsilon_{d}}{3}\left( 1 +x^{-3w}\right)}$$
+
 rescrevendo $\dfrac{\partial^2 \delta}{\partial t^2}$ em termos de x ,temos
 
 $$\dfrac{\partial^2 \delta}{\partial t^2} = \dfrac{\partial }{\partial t }\left(xH \dfrac{d \delta}{d x } \right)= \dfrac{\partial (xH) }{\partial t }\dfrac{d \delta}{d x } + xH\dfrac{\partial }{\partial t }\left( \dfrac{d \delta}{d x } \right)$$
@@ -887,11 +896,28 @@ $$\dfrac{\partial^2 \delta}{\partial t^2} =\dfrac{\partial (x) }{\partial t }\df
 
 $$\dfrac{\partial^2 \delta}{\partial t^2} = xH\dfrac{d \delta}{d x }\left( \dfrac{Hd(x) }{dx } + x\dfrac{dH }{dx }\right) + x^2H^2 \dfrac{d^2 \delta}{d x^2 }$$
 
-$$\dfrac{\partial^2 \delta}{\partial t^2} = xH\dfrac{d \delta}{d x }\left( H + x\dfrac{dH }{dx }\right) + x^2H^2 \dfrac{d^2 \delta}{d x^2 }$$
+$$\dfrac{\partial^2 \delta}{\partial t^2} = xH\dfrac{d \delta}{d x }\left( H + x\dfrac{d }{dx }\left( \sqrt{\dfrac{8\pi G\varepsilon_{d}}{3}\left( 1 +x^{-3w}\right)}\right)\right) + x^2H^2 \dfrac{d^2 \delta}{d x^2 }$$
+
+$$\dfrac{\partial^2 \delta}{\partial t^2} = xH\dfrac{d \delta}{d x }\left( H + x\sqrt{\dfrac{8\pi G\varepsilon_{d}}{3}}\dfrac{d }{dx }\left(\sqrt{  1 +x^{-3w}} \right)\right) + x^2H^2 \dfrac{d^2 \delta}{d x^2 }$$
+
+$$\dfrac{\partial^2 \delta}{\partial t^2} = xH\dfrac{d \delta}{d x }\left( H + x\sqrt{\dfrac{8\pi G\varepsilon_{d}}{3}} \left(\dfrac{-3wx^{-3w -1}}{2\sqrt{1 +x^{-3w}}} \right)\right) + x^2H^2 \dfrac{d^2 \delta}{d x^2 }$$
+
+$$\dfrac{\partial^2 \delta}{\partial t^2} = xH\dfrac{d \delta}{d x }\left( H + x\sqrt{\dfrac{8\pi G\varepsilon_{d}(1 +x^{-3w})}{3}} \left(\dfrac{-3wx^{-3w -1}}{2(1 +x^{-3w})} \right)\right) + x^2H^2 \dfrac{d^2 \delta}{d x^2 }$$
+
+$$\dfrac{\partial^2 \delta}{\partial t^2} = xH\dfrac{d \delta}{d x }\left( H + H \left(\dfrac{-3wx^{-3w}}{2(1 +x^{-3w})} \right)\right) + x^2H^2 \dfrac{d^2 \delta}{d x^2 }$$
+
+$$\dfrac{\partial^2 \delta}{\partial t^2} = xH^2\dfrac{d \delta}{d x }+ xH^2 \dfrac{-3wx^{-3w}}{2(1 +x^{-3w})}\dfrac{d \delta}{d x } + x^2H^2 \dfrac{d^2 \delta}{d x^2 }$$
 
 (46) torna-se
-$$\ddot{\delta} + 2H\dot{\delta}  -4\pi G\varepsilon_{tot}\delta = 0$$
+$$xH^2\dfrac{d \delta}{d x }+ xH^2 \dfrac{-3wx^{-3w}}{2(1 +x^{-3w})}\dfrac{d \delta}{d x } + x^2H^2 \dfrac{d^2 \delta}{d x^2 } + 2H\left( xH \dfrac{d \delta}{d x }\right)  -\dfrac{24\pi G\varepsilon_{tot}\delta}{6} = 0$$
 
+$$xH^2\dfrac{d \delta}{d x }+ xH^2 \dfrac{-3wx^{-3w}}{2(1 +x^{-3w})}\dfrac{d \delta}{d x } + x^2H^2 \dfrac{d^2 \delta}{d x^2 } + 2xH^2 \dfrac{d \delta}{d x }  -\dfrac{3H^2\delta}{2(1+x^{-3w})} = 0$$
+
+$$x^2(1+x^{-3w}) \dfrac{d^2 \delta}{d x^2 } +x \dfrac{-3wx^{-3w}}{2}\dfrac{d \delta}{d x } + 3x(1+x^{-3w}) \dfrac{d \delta}{d x }  -\dfrac{3}{2}\delta = 0$$
+
+$$x^2(1+x^{-3w}) \dfrac{d^2 \delta}{d x^2 } -\dfrac{3}{2}xwx^{-3w}\dfrac{d \delta}{d x } + 3x(1+x^{-3w}) \dfrac{d \delta}{d x }  -\dfrac{3}{2}\delta = 0$$
+
+$$x^2(1+x^{-3w}) \dfrac{d^2 \delta}{d x^2 }+ 3x(1+(1-\dfrac{w}{2})x^{-3w}) \dfrac{d \delta}{d x }  -\dfrac{3}{2}\delta = 0$$
 
 \begin{equation}
 	x^2 (1+x^{-3w})\dfrac{d^2\delta}{dx^2} + \dfrac{3}{2}x(1+ (1+w)x^{-3w})\dfrac{d\delta}{dt} - \dfrac{3}{2}\delta = 0
