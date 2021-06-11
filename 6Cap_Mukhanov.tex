@@ -5,6 +5,7 @@
 \usepackage{float}
 \usepackage{graphicx}
 \usepackage{verbatim}
+\usepackage{hyperref}
 
 \author{Arthur de Souza Molina}
 \title{Resolução de Alguns Cálculos do capitulo , Mukhanov}
@@ -26,41 +27,41 @@ Em grandes escalas, a matéria pode ser considerada um fluido perfeito, e sua di
 
 Se considerarmos um volume fixo não móvel, a sua variação de massa pode ser descrita como
 
-\begin{equation}
+\begin{equation}\label{eq1}
 		\dfrac{dM}{dt} = \int_{\Delta V} \dfrac{\partial \varepsilon (x,t)}{\partial t}
 \end{equation}
 
 A variação de Massa também pode ser descrita pelo fluxo de matéria pela superfície ao redor do volume fixo
 
-\begin{equation}
+\begin{equation}\eqref{eq2}
 	\dfrac{dM}{dt} = - \oint \varepsilon \textbf{V} d\sigma = - \int_{\Delta V} \nabla \,(\varepsilon \, \textbf{V}) dV
 \end{equation}
 
 Essas relações somente são consistentes se
 
-\begin{equation}
+\begin{equation}\label{eq3}
 	\dfrac{\partial \varepsilon}{\partial t} +\nabla \,(\varepsilon \, \textbf{V}) = 0
 \end{equation}
 
 A aceleração gravitacional $\textbf{g}$ em um pequeno elemento com massa é determinada pela força gravitacional
 
-\begin{equation}
+\begin{equation}\label{eq4}
 	\textbf{F}_{gr} = - \Delta M \cdot \nabla \phi
 \end{equation}
 
 onde o potencial gravitacional é dado por $\phi$ e pela pressão $\textit{p}$
-\begin{equation}
+\begin{equation}\label{eq5}
 	\textbf{F}_{pr} = - \oint p \cdot\ d\sigma = - \int_{\Delta V} \nabla p\ d\sigma \approx - \nabla p \ \Delta V
 \end{equation}
 
 com 
-\begin{equation}
+\begin{equation}\label{eq6}
 	\textbf{g} \equiv \dfrac{d \textbf{V} (\textbf{x} (t), t)}{dt} = \left( \dfrac{\partial \textbf{V}}{\partial t} \right)_x + \dfrac{dx^i(t)}{dt}\left( \dfrac{\partial \textbf{V}}{\partial x^i} \right) = \frac{\partial \textbf{V}}{\partial t} + (\textbf{V} \cdot \nabla ) \textbf{V}
 \end{equation}
 \newline
 pela lei da força de Newton (Segunda Lei de Newton)
 
-\begin{equation}
+\begin{equation}\label{eq7}
 	\Delta M \cdot \textbf{g} = \textbf{F}_{gr} + \textbf{F}_{pr}
 \end{equation}
 \newline
@@ -72,27 +73,27 @@ com $\Delta M \equiv \Delta V \cdot \varepsilon$, e portanto $\Delta V = \dfrac{
 $$\Delta M \cdot \textbf{g}  + \nabla p \,\dfrac{\Delta M}{\varepsilon} + \Delta M \cdot \nabla \phi=0 $$
 
 $$\textbf{g}  + \dfrac{\nabla p}{\varepsilon} + \nabla \phi=0 $$
-ao substituir a equação (6), torna-se a equação de Euler
+ao substituir a equação (\hyperref[eq6]{6}), torna-se a equação de Euler
 
-\begin{equation}
+\begin{equation}\label{eq8}
 	\dfrac{\partial \textbf{V} }{\partial t} + (\textbf{V} \cdot \nabla ) \textbf{V} + \frac{\nabla p}{\varepsilon} + \nabla \phi =0
 \end{equation}
 
 A conservação de entropia negligência a dissipação de energia, logo a entropia para um pequeno elemento de matéria é conservada:
 
-\begin{equation}
+\begin{equation}\label{eq9}
 	\dfrac{dS(\textbf{x},t)}{dt} = \dfrac{\partial S}{\partial t} + ( \textbf{V} \cdot \nabla) S = 0
 \end{equation}
 
 A equação que determina o potencial gravitacional é conhecida como equação de Poisson
 
-\begin{equation}
+\begin{equation}\label{eq10}
 	\Delta\phi = 4\pi G\varepsilon
 \end{equation}
 
 Com as equações $(3), (6)\to (10)$ tomadas em conjunto com a equação de estado
 
-\begin{equation}
+\begin{equation}\label{eq11}
 	p= p(\varepsilon , S)
 \end{equation}
 
@@ -108,7 +109,7 @@ fundo isotrópico com densidade de matéria independente do tempo constante: $\v
 
 Ao perturbar a distribuição de matéria, temos
 
-\begin{equation}
+\begin{equation}\label{eq12}
 	\varepsilon (\textbf{x},t) = \varepsilon_0 + \delta\varepsilon (\textbf{x},t),\,\, \textbf{V} (\textbf{x},t) = \textbf{V}_0 +\delta\textbf{V} (\textbf{x},t) 
 \end{equation}
 
@@ -118,24 +119,24 @@ onde cada variação $\delta\varepsilon \ll \varepsilon_0$, etc..
 \newline
 A pressão é dada por
 
-\begin{equation}
+\begin{equation}\label{eq13}
 	p (\textbf{x},t) = p( \varepsilon_0 + \delta\varepsilon (\textbf{x},t), S_0 + \delta S (\textbf{x},t) ) = p_0 +\delta p (\textbf{x},t) 
 \end{equation}
 
 $\delta p$ pode ser escrito em termos da densidade de energia e pertubações de entropia como
 
-\begin{equation}
+\begin{equation}\label{eq14}
 	\delta p = c_s^2\delta\varepsilon + \sigma\delta S
 \end{equation}
 
 onde $c^2_s \equiv \left(\dfrac{\partial p}{\partial\varepsilon}\right)_s$ é o quadrado da velocidade do som e $\sigma \equiv \left(\dfrac{\partial p}{\partial S}\right)_\varepsilon$. Para a matéria não relativística, a velocidade do som é muito menor que a velocidade da luz.
 
-Substituindo (12) e (14) em (3), (8) - (10) e mantendo apenas os termos
+Substituindo (\hyperref[eq12]{12}) e (\hyperref[eq14]{14}) em (\hyperref[eq3]{3}), (\hyperref[eq8]{8}) - (\hyperref[eq10]{10}) e mantendo apenas os termos
 que são lineares nas perturbações, obtemos:
 \newline
 $$\dfrac{\partial \varepsilon}{\partial t} +\nabla \,(\varepsilon \, \textbf{V}) = 0$$
 
-\begin{equation}
+\begin{equation}\label{eq15}
 	\dfrac{\partial\delta\varepsilon}{\partial t} + \varepsilon_0 \nabla (\delta\textbf{v}) = 0
 \end{equation}
 \newline
@@ -148,31 +149,31 @@ $$\dfrac{\partial\delta\textbf{v}}{\partial t} + \frac{\nabla (c_s^2\delta\varep
 
 $$\dfrac{\partial\delta\textbf{v}}{\partial t} +\frac{\nabla c_s^2\delta\varepsilon }{\varepsilon_0} + \frac{\nabla \sigma\delta S }{\varepsilon_0} + \nabla \delta\phi =0$$
 
-\begin{equation}
+\begin{equation}\label{eq16}
 	\dfrac{\partial\delta\textbf{v}}{\partial t} + \dfrac{c^2_s}{\varepsilon_0} \nabla\delta\varepsilon + \dfrac{\sigma}{\varepsilon_0}\nabla\delta S + \nabla\delta\phi = 0
 \end{equation}
 \newline
 
 $$\dfrac{\partial S}{\partial t} = 0$$
 
-\begin{equation}
+\begin{equation}\label{eq17}
 	\dfrac{\partial\delta S}{\partial t} = 0
 \end{equation}
 \newline
 $$\Delta\phi = 4\pi G\varepsilon$$
 
-\begin{equation}
+\begin{equation}\label{eq18}
 	\Delta\delta\phi = 4\pi G\delta\varepsilon
 \end{equation}
 
 A equação (17) possui solução simples, dado que
-\begin{equation}
+\begin{equation}\label{eq19}
 	\delta S (\textbf{x},t) =\delta S (\textbf{x}),
 \end{equation}
 
 isso indica que a entropia é invariante em relação ao tempo, mas varia em coordenadas arbitrárias.
 
-Tomando a divergente da equação (16) e escrevendo $\nabla\delta S$ e $\Delta\delta\phi$ em termos de $\delta\varepsilon$, temos
+Tomando a divergente da equação (\hyperref[eq16]{16}) e escrevendo $\nabla\delta S$ e $\Delta\delta\phi$ em termos de $\delta\varepsilon$, temos
 
 $$\dfrac{\partial\delta\textbf{v}}{\partial t} + \dfrac{c^2_s}{\varepsilon_0} \nabla\delta\varepsilon + \dfrac{\sigma}{\varepsilon_0}\nabla\delta S + \nabla\delta\phi = 0$$
 
@@ -190,7 +191,7 @@ $$\dfrac{\partial^2\delta\varepsilon}{\partial t^2}-c^2_s \Delta\delta\varepsilo
 
 $$\dfrac{\partial^2\delta\varepsilon}{\partial t^2}-c^2_s \Delta\delta\varepsilon  -\sigma\Delta\delta S (\textbf{x})-  4\pi G\varepsilon_0\delta\varepsilon = 0$$
 
-\begin{equation}
+\begin{equation}\label{eq20}
 	\dfrac{\partial^2\delta\varepsilon}{\partial t^2} - c^2_s\Delta\delta\varepsilon - 4\pi G\varepsilon_0\delta\varepsilon = \sigma\Delta\delta S(\textbf{x})
 \end{equation}
 
@@ -201,10 +202,10 @@ determinada fonte.
 	\textbf{6.2.1 Pertubações Adiabáticas}
 \end{center}
 Primeiro, podemos supor as pertubações de entropia ausentes, isto é, $\delta S=0$. O
-coeficientes em (20) não dependem das coordenadas espaciais, portanto, ao tomar o
+coeficientes em (\hyperref[eq20]{20}) não dependem das coordenadas espaciais, portanto, ao tomar o
 Transformada de Fourier,
 
-\begin{equation}
+\begin{equation}\label{eq21}
 	\delta\varepsilon (\textbf{x} , t ) = \int \delta\varepsilon_k (t)  \dfrac{e^{ik\textbf{x}}d^3 k}{(2\pi)^{2/3}}
 \end{equation}
 
@@ -252,7 +253,7 @@ $$  \int \delta (k^\prime + k)\left(\dfrac{\partial^2 (\delta\varepsilon_k (t))}
 
 para a integral definida ser equivalente a zero, o integrando deve ser igual a zero, logo
 
-\begin{equation}
+\begin{equation}\label{eq22}
 	\dfrac{\partial^2 (\delta\varepsilon_k (t))}{\partial t^2} +(k^2c^2_s - 4\pi G\varepsilon_0)\delta\varepsilon_k (t) = 0
 \end{equation}
 
@@ -268,32 +269,32 @@ $$\omega^2  =  + 4\pi G\varepsilon_0 -k^2c^2_s $$
 
 $$\omega = \pm \sqrt{4\pi G\varepsilon_0 -k^2c^2_s} =  \pm \sqrt{(-1)(k^2c^2_s - 4\pi G\varepsilon_0) }= \pm i \sqrt{k^2c^2_s - 4\pi G\varepsilon_0} $$
 
-A equação (22) tem a solução
-\begin{equation}
+A equação (\hyperref[eq22]{22}) tem a solução
+\begin{equation}\label{eq23}
 	\delta\varepsilon_k (t) \propto e^{(\pm \omega (t) t)}
 \end{equation}
 
 onde $\omega (t) = \sqrt{k^2c^2_s - 4\pi G \varepsilon_0}$. O comportamento da pertubação adiabática depende exclusivamente pelo sinal do expoente. 
 
 Definindo o comprimento Jeans como
-\begin{equation}
+\begin{equation}\label{eq24}
 	\lambda_J = \dfrac{2\pi}{k_J} = c_S \left(\dfrac{\pi}{G\varepsilon_0} \right)^{1/2}
 \end{equation}
 
 de modo que $\omega (k_J) = 0$, concluímos que se $\lambda < \lambda_J$, as soluções descrevem as ondas sonoras
 
-\begin{equation}
+\begin{equation}\label{eq25}
 	\delta\varepsilon_k \propto \sin (\omega t + \mathbf{k}\mathbf{x} + \alpha)
 \end{equation}
 
 propagando com velocidade de fase
-\begin{equation}
+\begin{equation}\label{eq26}
  	c_{fase} = \dfrac{\omega}{k}= c_s\sqrt{1 - \dfrac{k^2_J}{k}}.
 \end{equation}
 
 No limite $k \geq k_J$ ou em escalas muito pequenas ($\lambda \leq \lambda_J$) onde a gravidade é insignificante comparado com a pressão, temos $c_{fase} \to c_s$.
 Em largas escalas a gravidade domina e $\lambda > \lambda_J$, temos
-\begin{equation}
+\begin{equation}\label{eq27}
 	\delta\varepsilon_k \propto e^{\pm |\omega| t }
 \end{equation}
 
@@ -305,14 +306,14 @@ Em largas escalas a gravidade domina e $\lambda > \lambda_J$, temos
  \begin{center}
  	\textbf{6.2.2 Pertubações de Vetor}
  \end{center}
- Substituindo $\delta\varepsilon = 0$ e $\delta S = 0$ na equação (20), obtemos uma solução não trivial para o sistema de equações hidrodinâmicas. Já para as equações (15)-(18) reduzimos em
+ Substituindo $\delta\varepsilon = 0$ e $\delta S = 0$ na equação (\hyperref[eq20]{20}), obtemos uma solução não trivial para o sistema de equações hidrodinâmicas. Já para as equações (\hyperref[eq15]{15})-(\hyperref[eq18]{18}) reduzimos em
  
- \begin{equation}
+ \begin{equation}\label{eq28}
  	\nabla \delta\mathbf{v} = 0 ,\,\,\,\,\,\,\, \dfrac{\partial \mathbf{v}}{\partial t} = 0
  \end{equation}
 
 Pela segunda equação, é possível notar que $\delta\mathbf{v}$ é uma função das coordenadas espaciais independente do tempo. E a primeira equação diz respeito a velocidade da pertubação de onda plana, isto é, $\delta\mathbf{v} = \mathbf{w_k} e^{i\mathbf{k}\mathbf{x}}$ e que a velocidade é perpendicular ao vetor de onda $\mathbf{k}$, ou seja,
-\begin{equation}
+\begin{equation}\label{eq29}
 	\mathbf{w_k} \cdot \mathbf{k} = 0
 \end{equation}
 
@@ -367,7 +368,7 @@ $$ \int \left(\delta (k^\prime + k)\left( \dfrac{\partial^2 \delta\varepsilon_k 
 
 dado que para a integral ser equivalente há zero, o integrando deverá ser igual há 0, logo
 $$\dfrac{\partial^2 \delta\varepsilon_k (t)}{\partial t^2}+ k^2c^2_s\delta\varepsilon_k (t)- 4\pi G\varepsilon_0\delta\varepsilon_k (t) + \sigma k^2\delta S_k = 0 $$
-\begin{equation}
+\begin{equation}\label{eq30}
 	\dfrac{\partial^2 (\delta\varepsilon_k (t))}{\partial t^2} +(k^2c^2_s - 4\pi G\varepsilon_0)\delta\varepsilon_k (t) = -\sigma k^2 \delta S_k
 \end{equation} 
 
@@ -376,7 +377,7 @@ $$\dfrac{\partial^2 (\delta\varepsilon_k (t))}{\partial t^2} +(k^2c^2_s - 4\pi G
 Para a solução independente do tempo $\dfrac{\partial^2 (\delta\varepsilon_k (t))}{\partial t^2} = 0$, então
 
 $$(k^2c^2_s - 4\pi G\varepsilon_0)\delta\varepsilon_k = -\sigma k^2 \delta S_k$$
-\begin{equation}
+\begin{equation}\label{eq31}
 	\delta\varepsilon_k  = \dfrac{ -\sigma k^2 \delta S_k}{k^2c^2_s - 4\pi G\varepsilon_0}
 \end{equation}
 
@@ -400,11 +401,11 @@ universo.
 \end{center}
 
 Em um universo homogêneo e isotrópico, a densidade de energia é uma função do tempo e a velocidades obedecem a lei de Hubble
-\begin{equation}
+\begin{equation}\label{eq32}
 	\varepsilon = \varepsilon_0 (t), \,\,\, \mathbf{V} = \mathbf{V}_0 = \mathbf{H} (t) \mathbf{x}
 \end{equation}
 
-Substituindo essas equações na equação (3), temos
+Substituindo essas equações na equação (\hyperref[eq3]{3}), temos
 $$\dfrac{\partial \varepsilon_0}{\partial t} +\nabla \,(\varepsilon_0 \, \textbf{V}) = 0$$
 
 $$\dfrac{\partial \varepsilon_0}{\partial t} +\varepsilon_0\nabla \,( \mathbf{H} \mathbf{x}) = 0$$
@@ -417,11 +418,11 @@ $$\dfrac{\partial \varepsilon_0}{\partial t} +\mathbf{H}\left(\dfrac{\partial\ma
 
 $$\dfrac{\partial \varepsilon_0}{\partial t} +3\mathbf{H} \dfrac{\partial\mathbf{x}}{\partial x}\varepsilon_0= 0$$
 
-\begin{equation}
+\begin{equation}\label{eq33}
 	\dot{\varepsilon_0} + 3 \mathbf{H}\varepsilon_0 = 0 
 \end{equation}
 
-que afirma matematicamente que a massa com a massa não relativística se conserva. A divergência da equação de Euler (8) juntamente com a equação de Poisson (10) leva a equação de Friedmann 
+que afirma matematicamente que a massa com a massa não relativística se conserva. A divergência da equação de Euler (\hyperref[eq8]{8}) juntamente com a equação de Poisson (\hyperref[eq10]{10}) leva a equação de Friedmann 
 
  $$\dfrac{\partial \textbf{V} }{\partial t} + (\textbf{V} \cdot \nabla ) \textbf{V} + \frac{\nabla p}{\varepsilon} + \nabla \phi =0$$ com $\nabla^2\phi = 4\pi G\varepsilon_0$.
 
@@ -448,18 +449,18 @@ $$ 3(\dot{\mathbf{H}}  +\mathbf{H}^2(t))  =-\Delta\phi$$
 
 $$ 3(\dot{\mathbf{H}}  +\mathbf{H}^2(t))  =-4\pi G\varepsilon_0$$
 
-\begin{equation}
+\begin{equation}\label{eq34}
 	\dot{\mathbf{H}} + \mathbf{H}^2 = - \dfrac{4\pi G}{3}\varepsilon_0 
 \end{equation}
 
 Pertubações ignorando as pertubações de entropia e substituindo as expressões, obtemos
-\begin{equation}
+\begin{equation}\label{eq35}
 	\varepsilon = \varepsilon_0 + \delta\varepsilon_0 (\mathbf{x},t),\,\, \mathbf{V} = \mathbf{V}_0 + \delta\mathbf{v} , \phi= \phi_0 + \delta\phi\,\,\, 
 \end{equation}
 
 $$p = p_0 + \delta p= p_0 + c_2^2\delta\varepsilon$$
 
-aplicando nas equações (3), (8) e (10), encontramos as equações lineares para pequenas pertubações
+aplicando nas equações (\hyperref[eq3]{3}), (\hyperref[eq8]{8}) e (\hyperref[eq10]{10}), encontramos as equações lineares para pequenas pertubações
 $$\dfrac{\partial \varepsilon}{\partial t} +\nabla \,(\varepsilon \, \textbf{V}) = 0$$
 
 $$\dfrac{\partial (\varepsilon_0 + \delta\varepsilon_0)}{\partial t} +\nabla \,( (\varepsilon_0 + \delta\varepsilon_0) \, (\mathbf{V}_0 + \delta\mathbf{v})) = 0$$
@@ -475,7 +476,7 @@ $$\dfrac{\partial \delta\varepsilon_0}{\partial t} +\nabla \,( \delta\varepsilon
 
 com  $\nabla \, ( \delta\varepsilon_0 \cdot \delta\mathbf{v}) \to 0$, temos
 
-\begin{equation}
+\begin{equation}\label{eq36}
 	\dfrac{\partial\delta\varepsilon}{\partial t} + \varepsilon_0(\nabla\cdot\delta\mathbf{v})+\mathbf{\nabla} (\delta\varepsilon \cdot \mathbf{V}) = 0
 \end{equation}
 \newline
@@ -495,25 +496,25 @@ Desconsiderando os termos não relacionados há pequenas pertubações temos
 $$\dfrac{\partial \delta\mathbf{v} }{\partial t}+ (\delta\mathbf{v}\cdot \nabla)\mathbf{V}_0+ (\mathbf{V}_0\cdot \nabla) \delta\mathbf{v} + (\delta\mathbf{v}\cdot \nabla) \delta\mathbf{v} + \frac{c_s^2\nabla\delta\varepsilon}{\varepsilon_0}+ \nabla\delta\phi =0$$
 
 com $(\delta\mathbf{v}\cdot \nabla) \delta\mathbf{v} \to 0$, obtemos
-\begin{equation}
+\begin{equation}\label{eq37}
 	\dfrac{\partial\delta\mathbf{v}}{\partial t} + (\mathbf{V}_0 \cdot \nabla)\delta\mathbf{v} + (\delta\mathbf{v} \cdot \nabla) \mathbf{V}_0 + \dfrac{c^2_s}{\varepsilon_0}\nabla\delta\varepsilon + \nabla\delta\phi = 0
 \end{equation}
 \newline
 e
-\begin{equation}
+\begin{equation}\label{eq38}
 	\Delta\delta\phi = 4\pi G\delta\varepsilon.
 \end{equation}
 
 A velocidade de Hubble $\mathbf{V}_0$ depende explicitamente de $\mathbf{x}$ e, portanto, da transformada de Fourier em relação às coordenadas eulerianas $\mathbf{x}$ não reduz essas equações a um conjunto desacoplado de equações diferenciais ordinárias. É por isso que é mais conveniente para usar as coordenadas Lagrangianas (comovendo com o fluxo de Hubble) $\mathbf{q}$, que são relacionado com as coordenadas Eulerianas via
 
-\begin{equation}
+\begin{equation}\label{eq39}
 	\mathbf{x} = a(t)\mathbf{q}
 \end{equation}
 
 onde $a(t)$ é um fator de escala. A derivada parcial em relação ao tempo tomado em
 constante $\mathbf{x}$ é diferente da derivada parcial tomada na constante $\mathbf{q}$. Para um general função $f (\mathbf{x}, t)$ que temos
 
-\begin{equation}
+\begin{equation}\label{eq40}
 	\left( \dfrac{\partial f(\mathbf{x} = a(t)\mathbf{q}\, , t)}{\partial t} \right)_\mathbf{q} = \left( \dfrac{\partial f}{\partial t} \right)_\mathbf{x} + \dot{a}q^i\left( \dfrac{\partial f}{\partial x^i} \right)_t
 \end{equation}
 $$\left( \dfrac{\partial f(\mathbf{x} = a(t)\mathbf{q}\, , t)}{\partial t} \right)_\mathbf{q} = \left( \dfrac{\partial f}{\partial t} \right)_\mathbf{x} + \dfrac{\partial\mathbf{x}}{\partial t}\left( \dfrac{\partial f}{\partial x^i} \right)_t$$
@@ -525,17 +526,17 @@ $$\left(\left( \dfrac{\partial }{\partial t} \right)_\mathbf{q}\right)f =\left(\
 $$\left( \dfrac{\partial }{\partial t} \right)_\mathbf{q} =\left( \dfrac{\partial }{\partial t} \right)_\mathbf{x} + \mathbf{V}_0\cdot\nabla_\mathbf{x}$$
 e portanto
 
-\begin{equation}
+\begin{equation}\label{eq41}
 	\left(\dfrac{\partial}{\partial t}\right)_\mathbf{x} = \left( \dfrac{\partial}{\partial t} \right)_\mathbf{q} - (\mathbf{V}_0 \cdot \nabla_\mathbf{x})
 \end{equation}
 
 As derivadas espaciais estão relacionadas de forma mais simples
 
-\begin{equation}
+\begin{equation}\label{eq42}
 	\nabla_\mathbf{x} = \dfrac{1}{a}\nabla_\mathbf{q}
 \end{equation}
 
-Substituindo as derivadas em (36)-(38) e introduzindo a amplitude fracionária das pertubações de densidade $\delta\equiv\dfrac{\delta\varepsilon}{\varepsilon_0}$, e finalmente obtemos
+Substituindo as derivadas em (\hyperref[eq36]{36})-(\hyperref[eq38]{38}) e introduzindo a amplitude fracionária das pertubações de densidade $\delta\equiv\dfrac{\delta\varepsilon}{\varepsilon_0}$, e finalmente obtemos
 
 $$\dfrac{\partial\delta\varepsilon}{\partial t} + \varepsilon_0(\nabla\cdot\delta\mathbf{v})+\mathbf{\nabla} (\delta\varepsilon \cdot \mathbf{V}) = 0$$
 
@@ -547,7 +548,7 @@ $$\left(\dfrac{\partial\delta}{\partial t}\right) + \nabla_\mathbf{x}\delta\math
 
 $$\left(\dfrac{\partial\delta}{\partial t}\right) + \dfrac{1}{a}\nabla_\mathbf{q}\delta\mathbf{v} = 0$$
 
-\begin{equation}
+\begin{equation}\label{eq43}
 	\left( \dfrac{\partial \delta}{\partial t} \right) + \dfrac{1}{a}(\nabla\cdot\delta\mathbf{v}) = 0
 \end{equation}
 \newline
@@ -563,7 +564,7 @@ $$\left( \dfrac{\partial\delta\mathbf{v}}{\partial t} \right) +H\delta\mathbf{v}
 
 $$\left( \dfrac{\partial\delta\mathbf{v}}{\partial t} \right) +H\delta\mathbf{v} + \dfrac{c^2_s}{a}\nabla_\mathbf{q}\delta + \dfrac{1}{a}\nabla_\mathbf{q}\delta\phi = 0$$
 
-\begin{equation}
+\begin{equation}\label{eq44}
 	\left( \dfrac{\partial \delta\mathbf{v}}{\partial t} \right) +H\delta\mathbf{v}+\dfrac{c^2_s}{a}\nabla\delta + \dfrac{1}{a}\nabla\delta\phi =0
 \end{equation}
 \newline
@@ -575,15 +576,15 @@ $$\nabla^2_\mathbf{x}\delta\phi = 4\pi G(\varepsilon_0\delta)$$
 
 $$\dfrac{\nabla^2_\mathbf{q}\delta\phi}{a^2} = 4\pi G(\varepsilon_0\delta)$$
 
-\begin{equation}
+\begin{equation}\label{eq45}
 	\Delta\delta\phi = 4\pi Ga^2\varepsilon_0\delta
 \end{equation}
 
-onde $\nabla\equiv\nabla_\mathbf{q}$ e $\Delta$ agora são as derivadas em relação às coordenadas de Lagrange $\mathbf{q}$ e as derivadas de tempo são tomadas na constante $\mathbf{q}$. Ao derivar (43), temos usado (33) para o fundo e observou que $\nabla\cdot\mathbf{V}_0 = 3\mathbf{H}(t)$ e $(\delta\mathbf{v}\cdot\nabla\mathbf{x}) \mathbf{V}_0 = H\delta\mathbf{v}$.
-Tomando a divergência de (44) e usando as equações de continuidade e Poisson para
+onde $\nabla\equiv\nabla_\mathbf{q}$ e $\Delta$ agora são as derivadas em relação às coordenadas de Lagrange $\mathbf{q}$ e as derivadas de tempo são tomadas na constante $\mathbf{q}$. Ao derivar (\hyperref[eq43]{43}), temos usado (\hyperref[eq33]{33}) para o fundo e observou que $\nabla\cdot\mathbf{V}_0 = 3\mathbf{H}(t)$ e $(\delta\mathbf{v}\cdot\nabla\mathbf{x}) \mathbf{V}_0 = H\delta\mathbf{v}$.
+Tomando a divergência de (\hyperref[eq44]{44}) e usando as equações de continuidade e Poisson para
 expressar $(\nabla\cdot\delta\mathbf{v})$ e $\delta\phi$ em termos de $\delta$, derivamos a equação de forma fechada.
 
-Com as equações (43) podemos obter as seguintes relações
+Com as equações (\hyperref[eq43]{43}) podemos obter as seguintes relações
 $$\left( \dfrac{\partial \delta}{\partial t} \right) + \dfrac{1}{a}\nabla_\mathbf{q}\delta\mathbf{v} = 0$$
 
 $$\left( \dfrac{\partial \delta}{\partial t} \right)   = -\dfrac{1}{a}\nabla_\mathbf{q}\delta\mathbf{v}$$
@@ -614,7 +615,7 @@ $$ -\dfrac{\partial^2 \delta}{\partial t^2} -\mathbf{H} \dfrac{\partial\delta}{\
 
 $$ -\dfrac{\partial^2 \delta}{\partial t^2} -2\mathbf{H} \dfrac{\partial\delta}{\partial t} + \dfrac{c^2_s}{a^2}\nabla^2_\mathbf{q}\delta+ 4\pi G\varepsilon_0\delta=0$$
 
-\begin{equation}
+\begin{equation}\label{eq46}
 	\ddot{\delta} + 2\mathbf{H}\dot{\delta} - \dfrac{c^2_s}{a^2}\Delta\delta - 4\pi G\varepsilon_0\delta = 0
 \end{equation}
 que descreve a instabilidade gravitacional em um universo em expansão.
@@ -623,7 +624,7 @@ que descreve a instabilidade gravitacional em um universo em expansão.
 \begin{center}
 	\textbf{6.3.1 Pertubações Adiabáticas}
 \end{center}
-Tomando a transformada de Fourier da equação (46) para as coordenadas comoventes $\mathbf{q}$,
+Tomando a transformada de Fourier da equação (\hyperref[eq46]{46}) para as coordenadas comoventes $\mathbf{q}$,
 
 $$\delta = \int \delta_\mathbf{k} (t)e^{i\mathbf{k}\mathbf{q}}\dfrac{d^3k}{(2\pi)^{3/2}}$$
 
@@ -656,42 +657,42 @@ $$ \int \left(\dfrac{\partial^2\delta_\mathbf{k}(t)}{\partial t^2}+ 2\mathbf{H}\
 $$\int\delta(\mathbf{k}+\mathbf{k}^\prime)\left(\dfrac{\partial^2\delta_\mathbf{k}(t)}{\partial t^2}+ 2\mathbf{H}\dfrac{\partial\delta_\mathbf{k}(t)}{\partial t} +( \dfrac{c^2_sk^2}{a^2} - 4\pi G\varepsilon_0)\delta_\mathbf{k}(t) \right) d^3k =0 $$
 sabendo que o integrando deve ser equivalente a zero para que o resultado da integração ser igual a zero, assim obtemos a equação diferencial ordinária
  
-\begin{equation}
+\begin{equation}\label{eq47}
 	\ddot{\delta_\mathbf{k}} + 2\mathbf{H}\dot{\delta_\mathbf{k}} + \left( \dfrac{c^2_s k^2}{a^2} -4\pi G\varepsilon_0\right)\delta_\mathbf{k} = 0
 \end{equation}
 
 O comportamento de cada perturbação depende crucialmente de seu tamanho espacial; a escala de comprimento crítica é o comprimento de jeans
 
-\begin{equation}
+\begin{equation}\label{eq48}
 	\lambda^{ph}_J = \dfrac{2\pi a }{k_J} = c_s\sqrt{\dfrac{\pi}{G\varepsilon_0}}
 \end{equation}
 
 Aqui $\lambda^{ph}$ é o comprimento de onda físico, relacionado
 ao comprimento de onda comovente $\lambda = \dfrac{2\pi}{k}$ via $\lambda^{ph} = a\lambda$. Em um universo plano dominado pela matéria $\varepsilon_0 = (6\pi G t^2)^{-1}$ e, portanto,
 
-\begin{equation}
+\begin{equation}\label{eq49}
 	\lambda_J^{ph} \sim c_s t,
 \end{equation}
 
 isto é, o comprimento do jeans está na ordem do horizonte de som. Às vezes, em vez do
 Comprimento de jeans, usa-se a massa de jeans, definida como $M_J \equiv\varepsilon_0 (\lambda_J^{ph})^3$.
-Perturbações em escalas muito menores do que o comprimento de jeans ($\lambda \ll\lambda_J$) são válidas ondas. Se $c_s$ mudar adiabaticamente, então a solução de (47) é
+Perturbações em escalas muito menores do que o comprimento de jeans ($\lambda \ll\lambda_J$) são válidas ondas. Se $c_s$ mudar adiabaticamente, então a solução de (\hyperref[eq47]{47}) é
 
-\begin{equation}
+\begin{equation}\label{eq50}
 	\delta_\mathbf{k} \propto \dfrac{1}{\sqrt{c_s a}} \,exp\left( \pm k \int \dfrac{c_s dt}{a}\right)
 \end{equation}
 
 Em escalas muito maiores do que a escala de Jeans ($\lambda \gg \lambda_J$), a gravidade domina e nós
-pode negligenciar o termo dependente de k em (47). Então, uma das soluções é simplesmente
-proporcional à constante de Hubble $H (t)$. Na verdade, substituindo $\delta_d = H (t)$ em (47),
+pode negligenciar o termo dependente de k em (\hyperref[eq47]{47}). Então, uma das soluções é simplesmente
+proporcional à constante de Hubble $H (t)$. Na verdade, substituindo $\delta_d = H (t)$ em (\hyperref[eq47]{47}),
 onde definimos $c^2_s k^2 = 0$, descobre-se que a equação resultante coincide com o tempo
-derivada da equação de Friedmann (34). Observe que $\delta_d = H (t)$ é o decaimento
+derivada da equação de Friedmann (\hyperref[eq34]{34}). Observe que $\delta_d = H (t)$ é o decaimento
 solução da equação de perturbação (H diminui com o tempo) em um dominado pela matéria
 universo com curvatura arbitrária.
 
 Tanto a densidade de energia de fundo $\varepsilon_0 (t)$ quanto a energia deslocada no tempo
-densidade $\varepsilon_0 (t + \tau)$, onde $\tau =$ const, satisfaça (33), (34). Na verdade, usando (33)
-para expressar H em termos de $\varepsilon_0$ e substituí-lo em (34), obtemos uma equação para $\varepsilon_0 (t)$ em que o tempo não aparece explicitamente. Portanto, sua solução é invariante no tempo e invariante a translação. Para $\tau$ pequeno, a solução deslocada no tempo $\varepsilon_0 (t+ \tau)$ pode ser
+densidade $\varepsilon_0 (t + \tau)$, onde $\tau =$ const, satisfaça (\hyperref[eq33]{33}), (\hyperref[eq34]{34}). Na verdade, usando (\hyperref[eq33]{33})
+para expressar H em termos de $\varepsilon_0$ e substituí-lo em (\hyperref[eq34]{34}), obtemos uma equação para $\varepsilon_0 (t)$ em que o tempo não aparece explicitamente. Portanto, sua solução é invariante no tempo e invariante a translação. Para $\tau$ pequeno, a solução deslocada no tempo $\varepsilon_0 (t+ \tau)$ pode ser
 considerado como uma perturbação do fundo $\varepsilon_0 (t)$ com amplitude
 
 $$\delta_d = \dfrac{\varepsilon_0 (t+ \tau) -\varepsilon_0 (t) }{\varepsilon_0 (t)} \approx \dfrac{\dot{\varepsilon_0} (t)\tau }{\varepsilon_0 (t)} \propto H(t)$$.
@@ -699,11 +700,11 @@ $$\delta_d = \dfrac{\varepsilon_0 (t+ \tau) -\varepsilon_0 (t) }{\varepsilon_0 (
 Uma vez que conhecemos uma solução da equação diferencial de segunda ordem, $\delta_d$, então o
 outra solução independente $\delta_i$ pode ser facilmente encontrada com a ajuda do Wronskiano
 
-\begin{equation}
+\begin{equation}\label{eq51}
 	W \equiv \dot{\delta_d} \delta_i - \dot{\delta_i} \delta_d
 \end{equation}
 
-Tomando a derivada do Wronskiano e usando (47) para expressar $\ddot{\delta}$ em termos de $\dot{\delta}$ e $\delta$, descobrimos que $W$ satisfaz a equação
+Tomando a derivada do Wronskiano e usando (\hyperref[eq47]{47}) para expressar $\ddot{\delta}$ em termos de $\dot{\delta}$ e $\delta$, descobrimos que $W$ satisfaz a equação
 
 
 $$W \equiv \dot{\delta_d} \delta_i - \dot{\delta_i} \delta_d$$
@@ -716,7 +717,7 @@ $$\dot{W}= \delta_i\dfrac{\partial  \dot{\delta_d}}{\partial t}+\dot{\delta_d}\d
 
 $$\dot{W}= \delta_i\ddot{\delta_d}-\delta_d\ddot{\delta_i}$$
 
-Sabendo que $\delta_d$ e $\delta_i$ satisfazem a equação (46), isto é,
+Sabendo que $\delta_d$ e $\delta_i$ satisfazem a equação (\hyperref[eq46]{46}), isto é,
 $$\ddot{\delta_d} + 2\mathbf{H}\dot{\delta_d} + \left( \dfrac{c^2_s k^2}{a^2} -4\pi G\varepsilon_0\right)\delta_d = 0 $$
 e
 $$\ddot{\delta_i} + 2\mathbf{H}\dot{\delta_i} + \left( \dfrac{c^2_s k^2}{a^2} -4\pi G\varepsilon_0\right)\delta_i = 0$$
@@ -729,17 +730,17 @@ $$\dot{W}= \delta_i\left(- 2\mathbf{H}\dot{\delta_d} - \left( \dfrac{c^2_s k^2}{
 
 $$\dot{W}=  -2\mathbf{H}\delta_i\dot{\delta_d} +2\mathbf{H}\delta_d \dot{\delta_i} $$
 
-\begin{equation}
+\begin{equation}\label{eq52}
 	\dot{W} = -2H W
 \end{equation}
 
 que possui a seguinte solução
 
-\begin{equation}
+\begin{equation}\label{eq53}
 	W \equiv \dot{\delta_d} \delta_i - \dot{\delta_i} \delta_d = \dfrac{C}{a^2}
 \end{equation}
 
-onde C é uma constante de integração. Substituindo o $\delta_i = \delta_d f (t)$ em (53), obtemos uma equação para $f$ que é prontamente integrada:
+onde C é uma constante de integração. Substituindo o $\delta_i = \delta_d f (t)$ em (\hyperref[eq53]{53}), obtemos uma equação para $f$ que é prontamente integrada:
 
 $$\dot{\delta_d} (\delta_d f(t)) - \dfrac{\partial(\delta_d f(t))}{\partial t} \delta_d = \dfrac{C}{a^2}$$
 
@@ -747,18 +748,18 @@ $$\dot{\delta_d}f(t) - \delta_d\dfrac{\partial f(t)}{\partial t} -f(t)\dfrac{\pa
 
 $$- \delta_d\dfrac{\partial f(t)}{\partial t} = \dfrac{C}{a^2\delta_d}$$
 
-\begin{equation}
+\begin{equation}\label{eq54}
 	f = - \int \dfrac{C}{a^2\delta_d^2}dt.
 \end{equation}
-Assim, a solução de onda longa mais geral de (47) é
+Assim, a solução de onda longa mais geral de (\hyperref[eq47]{47}) é
 
-\begin{equation}
+\begin{equation}\label{eq55}
 	\delta = C_1 H \int \dfrac{dt}{a^2H^2} + C_2 H.
 \end{equation}
 
 Em um universo plano dominado pela matéria, $a \propto t^{2/3}$e $H \propto t^{-1}$. Neste caso, temos
 
-\begin{equation}
+\begin{equation}\label{eq56}
 	\delta = C_1 t^{2/3} + C_2 t^{-1}.
 \end{equation}
 
@@ -772,7 +773,7 @@ restrições no espectro inicial de perturbações.
 \begin{center}
 	\textbf{Vetor de Pertubações}
 \end{center}
-Substituindo $\delta =0 $ nas equações (43)-(45), obtemos
+Substituindo $\delta =0 $ nas equações (\hyperref[eq43]{43})-(\hyperref[eq45]{45}), obtemos
 $$\dfrac{\partial (0)}{\partial t} + \dfrac{1}{a}\nabla\delta\mathbf{v} = 0$$
 
 $$\nabla\delta\mathbf{v} = 0$$
@@ -788,13 +789,13 @@ $$\dfrac{\partial\delta\mathbf{v}}{\partial t} + H\delta\mathbf{v} + \dfrac{c^2_
 $$\dfrac{\partial\delta\mathbf{v}}{\partial t} + H\delta\mathbf{v} = 0$$
 \newline
 
-\begin{equation}
+\begin{equation}\label{eq57}
 	\nabla\delta\mathbf{v} = 0 , \quad \dfrac{\partial\delta\mathbf{v}}{\partial t } + H\delta\mathbf{v} = 0
 \end{equation}
 
 Da primeira equação segue que para uma perturbação de onda plana, $\delta\mathbf{v} \propto \delta\mathbf{v}_\mathbf{k} (t)e^{(i\mathbf{kq})}$, a velocidade peculiar $\delta\mathbf{v}$ é perpendicular ao número de onda $\mathbf{k}$. A segunda equação torna-se
 
-\begin{equation}
+\begin{equation}\label{eq58}
 	\delta\dot{\mathbf{v}_\mathbf{k}} + \dfrac{\dot{a}}{a}\delta\\mathbf{v}_\mathbf{k}=0,
 \end{equation}
 
@@ -810,10 +811,10 @@ a rotação das galáxias.
 	\textbf{6.3.3 Solução Auto-similar}
 \end{center}
 Para perturbações de grande escala, podemos negligenciar a pressão e as derivadas espaciais
-desistir de (46). Neste caso, a solução para as perturbações pode ser escrita diretamente
+desistir de (\hyperref[eq46]{46}). Neste caso, a solução para as perturbações pode ser escrita diretamente
 no espaço de coordenadas
 
-\begin{equation}
+\begin{equation}\label{eq59}
 	\delta (\mathbf{q},t ) = A(\mathbf{q}) \delta_i (t)+B(\mathbf{q})\delta_d (t),
 \end{equation}
 onde $\delta_i$ e $\delta_d$ são modos crescente e decrescente, respectivamente. Sem perder
@@ -822,13 +823,13 @@ distribuição de densidade neste momento é descrita pela função $\delta(\mat
 está em repouso em relação ao fluxo de Hubble ($\delta\mathbf{v} \propto \delta (\mathbf{q}, t_0) = 0$), então, expressando $A (q)$
 e $B (\mathbf{q})$ em termos de $\delta (\mathbf{q}, t0)$, obtemos
 
-\begin{equation}
+\begin{equation}\label{eq60}
 	\delta (\mathbf{q},t) = \delta (\mathbf{q}, t_0)\left( \dfrac{\delta_i(t)}{1 - (\dot{\delta_i}/\dot{\delta_d})_{t_0}} + \dfrac{\delta_d(t)}{1 - (\dot{\delta_d}/\dot{\delta_i})_{t_0}}\right)
 \end{equation}
 
 Neste caso particular, a perturbação preserva sua forma espacial inicial à medida que se desenvolve. Essa solução é considerada semelhante a si mesma.
 Genericamente, a forma de não homogeneidade muda. No entanto, em horários tardios ($t \gg t_0$)
-quando o modo de crescimento dominar, podemos omitir o segundo termo em (59) e o
+quando o modo de crescimento dominar, podemos omitir o segundo termo em (\hyperref[eq59]{59}) e o
 a perturbação linear cresce de maneira auto-semelhante.
 \newline
 
@@ -850,22 +851,22 @@ com equação de estado $w = 1/3$, ou matéria escura com $w < - 1/3$.
 sozinho, $\delta \equiv \delta\varepsilon_d / \varepsilon_d$, coincide com (46), mas a constante de Hubble agora é determinada
 pela densidade total de energia
 
-\begin{equation}
+\begin{equation}\label{eq61}
 	\varepsilon_{tot} = \dfrac{\varepsilon_{eq}}{2}\left( \left( \dfrac{a_{eq}}{a}\right)^3 + \left(\dfrac{a_{eq}}{a} \right)^{3 (1+w)}\right),
 \end{equation}
 
 através da relação usual, que para um universo plano é 
-\begin{equation}
+\begin{equation}\label{eq62}
 	H^2 = \dfrac{8\pi G}{3}\varepsilon_{tot}.
 \end{equation}
-Aqui um $a_{eq}$ é o fator de escala em “igualdade” quando as densidades de energia de ambos as componentes são iguais. Para encontrar as soluções explícitas de (46), é conveniente reescrevê-lo
+Aqui um $a_{eq}$ é o fator de escala em “igualdade” quando as densidades de energia de ambos as componentes são iguais. Para encontrar as soluções explícitas de (\hyperref[eq46]{46}), é conveniente reescrevê-lo
 usando como uma variável de tempo o fator de escala normalizado $x \equiv a / a_{eq}$ em vez de $t$. Tirando
-em consideração que $\varepsilon_0$ entrando em (46) é a densidade de matéria fria sozinha, igual a
+em consideração que $\varepsilon_0$ entrando em (\hyperref[eq46]{46}) é a densidade de matéria fria sozinha, igual a
 
-\begin{equation}
+\begin{equation}\label{eq63}
 	\varepsilon_d = \dfrac{\varepsilon_{eq}}{2}\left(\dfrac{a_{eq}}{a}\right)^3.
 \end{equation}
-e usando (62) para expressar o parâmetro de Hubble em termos de $x$, temos
+e usando (\hyperref[eq62]{62}) para expressar o parâmetro de Hubble em termos de $x$, temos
 
 $$H^2 = \dfrac{8\pi G}{3}\varepsilon_{tot}$$
 
@@ -914,7 +915,7 @@ $$\dfrac{\partial^2 \delta}{\partial t^2} = xH\dfrac{d \delta}{d x }\left( H + H
 
 $$\dfrac{\partial^2 \delta}{\partial t^2} = xH^2\dfrac{d \delta}{d x }+ xH^2 \dfrac{-3wx^{-3w}}{2(1 +x^{-3w})}\dfrac{d \delta}{d x } + x^2H^2 \dfrac{d^2 \delta}{d x^2 }$$
 
-(46) torna-se
+(\hyperref[eq46]{46}) torna-se
 $$xH^2\dfrac{d \delta}{d x }+ xH^2 \dfrac{-3wx^{-3w}}{2(1 +x^{-3w})}\dfrac{d \delta}{d x } + x^2H^2 \dfrac{d^2 \delta}{d x^2 } + 2H\left( xH \dfrac{d \delta}{d x }\right)  -\dfrac{24\pi G\varepsilon_{tot}\delta}{6} = 0$$
 
 $$xH^2\dfrac{d \delta}{d x }+ xH^2 \dfrac{-3wx^{-3w}}{2(1 +x^{-3w})}\dfrac{d \delta}{d x } + x^2H^2 \dfrac{d^2 \delta}{d x^2 } + 2xH^2 \dfrac{d \delta}{d x }  -\dfrac{3H^2\delta}{2(1+x^{-3w})} = 0$$
@@ -925,20 +926,20 @@ $$x^2(1+x^{-3w}) \dfrac{d^2 \delta}{d x^2 } -\dfrac{3}{2}xwx^{-3w}\dfrac{d \delt
 
 $$x^2(1+x^{-3w}) \dfrac{d^2 \delta}{d x^2 }+ 3x(1+(1-\dfrac{w}{2})x^{-3w}) \dfrac{d \delta}{d x }  -\dfrac{3}{2}\delta = 0$$
 
-\begin{equation}
+\begin{equation}\label{eq64}
 	x^2 (1+x^{-3w})\dfrac{d^2\delta}{dx^2} + \dfrac{3}{2}x(1+ (1-w)x^{-3w})\dfrac{d\delta}{dt} - \dfrac{3}{2}\delta = 0
 \end{equation}
 
-Pulamos em (64) o termo proporcional a $c_s^2$ porque ele é determinado por
+Pulamos em (\hyperref[eq64]{64}) o termo proporcional a $c_s^2$ porque ele é determinado por
 a pressão da matéria fria sozinha e, portanto, é insignificante. A solução geral
-de (64) para um $w = const$ arbitrário é dado por uma combinação linear de funções hipergeométricas. No entanto, pelo menos em dois casos importantes, eles se reduzem a simples funções elementares.
+de (\hyperref[eq64]{64}) para um $w = const$ arbitrário é dado por uma combinação linear de funções hipergeométricas. No entanto, pelo menos em dois casos importantes, eles se reduzem a simples funções elementares.
 
 Constante cosmológica w = − 1. Pode-se facilmente verificar que, neste caso,
 
-\begin{equation}
+\begin{equation}\label{eq65}
 	\delta_1 (x) = \sqrt{1+x^{-3}}
 \end{equation}
-\textbf {Problema 6.5} Verifique se $\delta_1 (x) $ é uma solução de (64),  \\
+\textbf {Problema 6.5} Verifique se $\delta_1 (x) $ é uma solução de (\hyperref[eq64]{64}),  \\
 Prova:\\
 A derivada de primeira ordem de $\delta_1$ em relação há $x$, temos
 
@@ -992,8 +993,8 @@ $$24x^3 + 15 - 9- 18x^{3} - 6x^3 -6 =0$$
 
 $$0 = 0$$
 
- portanto satisfaz (64). A outra solução pode ser obtida usando as propriedades do
-Wronskiano\\ $W (\delta_1, \delta_2) = \dot{\delta_1}\delta_2 - \dot{\delta_2}\delta_1 = C e^{\int P(x)dx}$ para $\ddot{\delta} + P(x)\dot{\delta} + Q(x) \delta = 0$ e manipulando a equação (64), encontrando o P(x), temos
+ portanto satisfaz (\hyperref[eq64]{64}). A outra solução pode ser obtida usando as propriedades do
+Wronskiano\\ $W (\delta_1, \delta_2) = \dot{\delta_1}\delta_2 - \dot{\delta_2}\delta_1 = C e^{\int P(x)dx}$ para $\ddot{\delta} + P(x)\dot{\delta} + Q(x) \delta = 0$ e manipulando a equação (\hyperref[eq64]{64}), encontrando o P(x), temos
 
 $$P(x) = \dfrac{3x}{2}\dfrac{(1+ (1-w)x^{-3w})}{x^2 (1+x^{-3w})} = \dfrac{3}{2x}\left(1 - \dfrac{wx^{-3w}}{(1+x^{-3w})}\right)$$
 
@@ -1006,8 +1007,36 @@ $$\int P(x)dx = \dfrac{3}{2}\ln{x} + \dfrac{1}{2}\ln{(1+x^{-3w})}$$
 $$\dot{\delta_1}\delta_2 - \dot{\delta_2}\delta_1  = ce^{-\left(\dfrac{3}{2}\ln{x} + \dfrac{1}{2}\ln{(1+x^{-3w})} \right)}$$
 
 $$\dot{\delta_1}\delta_2 - \dot{\delta_2}\delta_1 = \dfrac{c}{x^{3/2}(1+x^{-3w})^{1/2}}$$
-\begin{equation}
-	\delta_2 (x) = \delta_1 (x)\int^x \dfrac{dy}{y^{3/2}(1+y^{-3w})^{1/2}\delta^2_1 (y)}
+
+$$\dot{\delta_1}\delta_2 - \dot{\delta_2}\delta_1 = \dfrac{c}{x^{3/2}(1+x^{3})^{1/2}}$$
+
+\begin{equation}\label{eq66}
+	\delta_2 (x) = \delta_1 (x)\int^x \dfrac{dy}{y^{3/2}(1+y^{-3w})^{1/2}\delta^2_1 (y)},
+\end{equation}
+
+Para w=-1, a solução geral da (\hyperref[eq64]{64}) é portanto
+
+\begin{equation}\label{eq67}
+	\delta (x) = C_1 \sqrt{1+x^{-3}} + C_2\sqrt{1+x^{-3}}\int^x_0 \left( \dfrac{y}{1+y^3}\right)^{3/2} dy,
+\end{equation}
+
+onde $C_1$ e $C_2$ são constantes de integração.Nos primeiros instantes, quando a matéria fria domina ($x \ll 1$), a perturbação cresce à medida que
+
+\begin{equation}\label{eq68}
+	\delta (x) = C_1x^{3/2} +\frac{5}{2} C_2x + O(x^{3/2}),
+\end{equation}
+
+em total concordância com nosso resultado anterior. Posteriormente, o cosmológico
+constante torna-se dominante e no limite $x \gg 1$ temos \hyperref[eq68]{68}
+
+\begin{equation}\label{eq69}
+	\delta (x) = (C_1 + I C_2) -\frac{1}{2}C_2x^{-2} + O (x^{-3}),
+\end{equation}
+
+onde 
+
+\begin{equation}\label{eq70}
+	I = \int_{0}^{\infty} \left( \dfrac{y}{1+y^3}\right)^{3/2} dy \simeq 0.57 .
 \end{equation}
 
 \end{document}
