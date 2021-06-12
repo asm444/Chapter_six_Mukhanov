@@ -927,7 +927,7 @@ $$x^2(1+x^{-3w}) \dfrac{d^2 \delta}{d x^2 } -\dfrac{3}{2}xwx^{-3w}\dfrac{d \delt
 $$x^2(1+x^{-3w}) \dfrac{d^2 \delta}{d x^2 }+ 3x(1+(1-\dfrac{w}{2})x^{-3w}) \dfrac{d \delta}{d x }  -\dfrac{3}{2}\delta = 0$$
 
 \begin{equation}\label{eq64}
-	x^2 (1+x^{-3w})\dfrac{d^2\delta}{dx^2} + \dfrac{3}{2}x(1+ (1-w)x^{-3w})\dfrac{d\delta}{dt} - \dfrac{3}{2}\delta = 0
+	x^2 (1+x^{-3w})\dfrac{d^2\delta}{dx^2} + \dfrac{3}{2}x(1+ (1-w)x^{-3w})\dfrac{d\delta}{dx} - \dfrac{3}{2}\delta = 0
 \end{equation}
 
 Pulamos em (\hyperref[eq64]{64}) o termo proporcional a $c_s^2$ porque ele é determinado por
@@ -975,9 +975,9 @@ $$x^2 (1+x^{-3w})\dfrac{d^2\delta_1}{dx^2} = x^2 (1+x^3)\left( \dfrac{3 (8x^3 + 
 
 $$x^2 (1+x^{-3w})\dfrac{d^2\delta_1}{dx^2} = \dfrac{3 (8x^3 + 5)}{4x^3\left(1+x^{-3}\right)^{1/2} }$$
 
-$$\dfrac{3}{2}x(1+ (1-w)x^{-3w})\dfrac{d\delta}{dt} = \dfrac{3}{2}x(1+ 2x^{3})\left(  - \dfrac{3}{2x^4\sqrt{1+x^{-3}}}\right)$$
+$$\dfrac{3}{2}x(1+ (1-w)x^{-3w})\dfrac{d\delta}{dx} = \dfrac{3}{2}x(1+ 2x^{3})\left(  - \dfrac{3}{2x^4\sqrt{1+x^{-3}}}\right)$$
 
-$$\dfrac{3}{2}x(1+ (1-w)x^{-3w})\dfrac{d\delta}{dt} =- \dfrac{9(1+ 2x^{3})}{4x^3\sqrt{1+x^{-3}}}$$
+$$\dfrac{3}{2}x(1+ (1-w)x^{-3w})\dfrac{d\delta}{dx} =- \dfrac{9(1+ 2x^{3})}{4x^3\sqrt{1+x^{-3}}}$$
 
 $$\dfrac{3}{2}\delta = \dfrac{3\sqrt{1+x^{-3}}}{2}$$
 
@@ -1072,13 +1072,22 @@ onde
 	I = \int_{0}^{\infty} \left( \dfrac{y}{1+y^3}\right)^{3/2} dy \simeq 0.57 .
 \end{equation}
 
-Assim, quando a constante cosmológica ultrapassa a densidade da matéria, o crescimento cessa e a amplitude da perturbação é congelada. De acordo com (\hyperref[eq46]{46}), o potencial gravitacional induzido decai na proporção inversa ao fator de escala já que $\varepsilon_d \propto a^{-3}.$ Os resultados obtidos não são surpreendentes porque o cosmológico constante atua como “antigravidade” e tenta impedir o crescimento das perturbações.
+Assim, quando a constante cosmológica ultrapassa a densidade da matéria, o crescimento cessa e a amplitude da perturbação é congelada. De acordo com (\hyperref[eq46]{46}), o potencial gravitacional induzido decai na proporção inversa ao fator de escala já que $\varepsilon_d \propto a^{-3}.$ Os resultados obtidos não são surpreendentes porque a constante cosmológica atua como “antigravidade” e tenta impedir o crescimento das perturbações.
 \newline
 
-\textit{Radiação Cósmica de Fundo} \\O comprimento de Jeans para radiação é comparável ao horizonte tamanho porque a velocidade do som no componente de radiação é da ordem da velocidade de luz ($c^2_s = 1/3$). Portanto, matéria escura fria, que interage apenas gravitacionalmente com radiação, não induz perturbações significativas na radiação e estudar o crescimento de não homogeneidades na matéria fria sozinho ainda podemos usar (\hyperref[eq64]{64}), definindo $w = 1/3$. Nesse caso,
+\textit{Radiação Cósmica de Fundo} \\O comprimento de Jeans para radiação é comparável ao tamanho do horizonte porque a velocidade do som no componente de radiação é da ordem da velocidade de luz ($c^2_s = 1/3$). Portanto, matéria escura fria, que interage apenas gravitacionalmente com radiação, não induz perturbações significativas na radiação e estudar o crescimento de não homogeneidades na matéria fria sozinho ainda podemos usar (\hyperref[eq64]{64}), definindo $w = 1/3$. Nesse caso,
+
+$$x^2 (1+x^{-1})\dfrac{d^2\delta}{dx^2} + \dfrac{3}{2}x(1+ (1-\frac{1}{3})x^{-1})\dfrac{d\delta}{dx} - \dfrac{3}{2}\delta = 0$$
 
 \begin{equation}\label{eq71}
-	\delta_1 (x) = 1+ \frac{3}{2}x
+	\delta_1 (x) = 1+ \frac{3x}{2}
 \end{equation}
+
+$$x^2 (1+x^{-1})\dfrac{d^2\left(1+ \frac{3x}{2}\right)}{dx^2} + \dfrac{3}{2}x(1+ \frac{2}{3}x^{-1})\dfrac{d\left(1+ \frac{3x}{2}\right)}{dx} - \dfrac{3}{2}\left(1+ \frac{3x}{2}\right) = 0$$
+
+$$ \dfrac{3}{2}+\dfrac{9x}{4} - \dfrac{3}{2} - \dfrac{9x}{4} = 0$$
+
+$$ 0=0$$
+
 
 \end{document}
