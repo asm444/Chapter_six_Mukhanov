@@ -1013,19 +1013,19 @@ $\left(x^2 (1+x^3)\delta_2\dfrac{d^2\delta_1}{dx^2} + \dfrac{3}{2}x(1+ 2x^3)\del
 
 $$x^2 (1+x^3)\left( \delta_2\dfrac{d^2\delta_1}{dx^2}-\delta_1\dfrac{d^2\delta_2}{dx^2}\right) + \dfrac{3}{2}x(1+ 2x^3)\left(\delta_2\dfrac{d\delta_1}{dx} - \delta_1\dfrac{d\delta_2}{dx}\right)  =0$$
 
-$$x^2 (1+x^3)W^\prime + \dfrac{3}{2}x(1+ 2x^3)W  =0$$
+$$x^2 (1+x^{-3w})W^\prime + \dfrac{3}{2}x(1+ 2x^{-3w})W  =0$$
 
-$$W^\prime + \dfrac{3}{2}\dfrac{x(1+ 2x^3)}{x^2 (1+x^3)}W  =0$$
+$$W^\prime + \dfrac{3}{2}\dfrac{x(1+ 2x^{-3w})}{x^2 (1+x^{-3w})}W  =0$$
 
-$$W^\prime + \dfrac{3}{2x}\left(1 - \dfrac{x^3}{(1+x^3)}\right)W  =0$$
+$$W^\prime + \dfrac{3}{2x}\left(1 - \dfrac{x^{-3w}}{(1+x^{-3w})}\right)W  =0$$
 
-$$\therefore W = \dfrac{c}{x^{3/2}\sqrt{1+x^3}} \text{ 	com } c \in \mathbb{R}$$
+$$\therefore W = \dfrac{c}{x^{3/2}\sqrt{1+x^{-3w}}} \text{ 	com } c \in \mathbb{R}$$
 
 $$\delta_2\dfrac{d\delta_1}{dx} - \delta_1\dfrac{d\delta_2}{dx} = \dfrac{c}{x^{3/2}\sqrt{1+x^3}}$$
 
 $$-\dfrac{3\delta_2}{2x^4\sqrt{1+x^{-3}}} - \sqrt{1+x^{-3}}\dfrac{d\delta_2}{dx} = \dfrac{c}{x^{3/2}\sqrt{1+x^3}}$$
 
-$$\dfrac{d\delta_2}{dx}+\dfrac{3\delta_2}{2x^4(1+x^{-3})} = -\dfrac{c}{x^{3/2}\sqrt{1+x^3}(1+x^{-3})^{1/2}}$$
+$$\dfrac{d\delta_2}{dx}+\dfrac{3\delta_2}{2x^4(1+x^{-3})} = -\dfrac{c}{x^{3/2}\sqrt{1+x^{-3w}}(1+x^{-3})^{1/2}}$$
 
 fator integrante 
 
@@ -1035,13 +1035,13 @@ $$u = exp \left( -\ln(1+x^{-3})^{1/2}\right)$$
 
 $$u = \dfrac{1}{(1+x^{-3})^{1/2}}$$
 
-$$\dfrac{d(\frac{\delta_2}{(1+x^{-3})^{1/2}})}{dx} = -\dfrac{c}{x^{3/2}\sqrt{1+x^3}(1+x^{-3})}$$
+$$\dfrac{d(\frac{\delta_2}{(1+x^{-3})^{1/2}})}{dx} = -\dfrac{c}{x^{3/2}\sqrt{1+x^{-3w}}(1+x^{-3})}$$
 
-$$\dfrac{\delta_2}{(1+x^{-3})^{1/2}} = \int\dfrac{C_2}{x^{3/2}\sqrt{1+x^3}(1+x^{-3})} dx$$
+$$\dfrac{\delta_2}{(1+x^{-3})^{1/2}} = \int\dfrac{C_2}{x^{3/2}\sqrt{1+x^{-3w}}(1+x^{-3})} dx$$
 
-$$\delta_2(x) =C_2(1+x^{-3})^{1/2} \int\dfrac{C_2}{x^{3/2}\sqrt{1+x^3}(1+x^{-3})} dx$$
+$$\delta_2(x) =C_2(1+x^{-3})^{1/2} \int\dfrac{dx}{x^{3/2}\sqrt{1+x^{-3w}}(1+x^{-3})} $$
 
-fazendo a substituição de variável $\delta_1 (x) = \sqrt{1+x^{-3}}$ e a mudança de variável de integração de x para y e em termos de y no integrando, obtemos
+$$\delta_2(x) =C_2\delta_1(x) \int\dfrac{dx}{x^{3/2}\sqrt{1+x^{-3w}}\delta_1^2(x)} $$
 
 \begin{equation}\label{eq66}
 	\delta_2 (x) = \delta_1 (x)\int^x \dfrac{dy}{y^{3/2}(1+y^{-3w})^{1/2}\delta^2_1 (y)},
